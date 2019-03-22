@@ -25,7 +25,7 @@
                 class="zmdi zmdi-close f-16"
                 @click="onClickDeleteReply"></i>
         </div>
-        <div v-html="reply.text"></div>
+        <div class="pre-wrap" v-html="reply.text"></div>
     </div>
 </template>
 
@@ -67,6 +67,10 @@ export default {
 
     .nickname {
         max-width: 120px;
+    }
+
+    img {
+        max-width: 240px !important;
     }
 
     .delete-reply {

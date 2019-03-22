@@ -4,7 +4,7 @@
         <Modal v-if="!writeAllowed" @close="onCloseWriteArticlePassword">
             <h2 class="c-danger" slot="header">{{ 'ENTER_PASSWORD' | translate }}</h2>
             <div slot="body">
-                <input v-model="article.password" :placeholder="'PASSWORD' | translate">
+                <input type="password" v-model="article.password" :placeholder="'PASSWORD' | translate">
             </div>
             <div slot="footer" class="m-l-a" style="width: 240px;">
                 <div class="flex-row">
