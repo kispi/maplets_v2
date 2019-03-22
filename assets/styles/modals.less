@@ -1,0 +1,130 @@
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-container {
+    word-wrap: break-word;
+    width: 90vw;
+    max-width: 480px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: @brand-accent;
+}
+
+.modal-body {
+    margin: 30px 0;
+}
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.confirm-chat-user {
+    .modal-container {
+        background: none;
+        box-shadow: none;
+        padding: 4px;
+        width: 320px;
+
+        .modal-body {
+            margin: 0;
+
+            div.lh-0 {
+                box-shadow: 1px 1px 2px rgba(96, 0, 0, 0.75);
+            }
+        }
+
+        .world-label {
+            width: 104px;
+
+            img {
+                width: 14px;
+                height: 14px;
+            }
+        
+            &.selected {
+                font-weight: 700;
+                .text-shadow();
+            }
+        }
+    
+        input {
+            border: 4px solid @maple-brown !important;
+        }
+    }
+}
+
+.confirm-chat-type {
+    .modal-container {
+        padding: 8px;
+        background: @maple-modal-ingame;
+        border: 3px double #fff;
+
+        .modal-body {
+            margin: 0;
+
+            .radio-buttons {
+                button {
+                    &:hover, &.selected {
+                        background: #fff;
+                    }
+
+                    div {
+                        padding: 1px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.confirm-chat-type,
+.confirm-chat-user {
+    * {
+        font-family: Gulim;
+    }
+
+    .btn-container button {
+        background: @maple-modal-ingame-button;
+        padding: 4px;
+        max-width: 64px;
+        .text-shadow();
+    }
+}

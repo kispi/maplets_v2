@@ -1,0 +1,153 @@
+.starforce {
+    input {
+        height: 40px;
+        border: 2px solid @brand-primary !important;
+    }
+
+    .zmdi-star, .zmdi-star-outline {
+        font-size: 24px;
+        color: @brand-primary;
+    }
+
+    .zmdi-star {
+        &:not(.zmdi-star-outline) {
+            color: @m-yellow;
+        }
+    }
+
+    .zmdi-star-outline.hovered {
+        color: @m-yellow;
+    }
+
+    .result {
+        font-size: 24px;
+        background: rgba(0, 0, 0, 0.75);
+        padding: 8px 16px;
+        
+        @media (max-width: 767px) {
+            & {
+                &:first-child {
+                    padding-bottom: 0;
+                }
+
+                &:nth-child(2) {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .history {
+            .ad-total { color: @m-cyan; }
+            .ad-basic { color: #fff; }
+            .ad-bonus { color: @m-lime; }
+            .ad-enchant { color: @m-cyan; }
+        }
+    }
+
+    .mushroom {
+        width: 48px;
+        border-radius: 50%;
+    }
+}
+
+.arcane {
+    color: #fff;
+    font-weight: 700;
+
+    .keys {
+        background: rgba(0, 150, 190, 0.75);
+    }
+
+    .values {
+        background: rgba(76, 175, 80, 0.75);
+
+        > div {
+            font-size: 24px;
+        }
+    }
+
+    .keys, .values {
+        border-bottom: 1px dashed @m-lightgray;
+
+        > div {
+            padding: 16px;
+
+            &:first-child {
+                border-right: 1px dashed @m-lightgray;
+            }
+        }
+    }
+
+    .level-box {
+        div > div {
+            padding: 8px;
+            color: #fff;
+            background: rgba(76, 175, 80, 0.75);
+            border: 1px dashed #fff;
+            cursor: pointer;
+            
+            &.selected {
+                background: rgba(0, 150, 190, 0.75);
+            }
+        }
+    }
+}
+
+.ability {
+    .items {
+        margin: auto;
+        border-spacing: 0;
+        
+        tr {
+            &:first-child > td {
+                background: #fff !important;
+                color: @text-color-dark;
+            }
+        }
+
+        .item {
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+
+            &:first-child {
+                background-color: rgba(36, 164, 225, 1);
+                border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+            }
+            &:not(:first-child) {
+                // min-width: 120px;
+            }
+            &:nth-child(2) { background: @maple-rare; }
+            &:nth-child(3) { background: @maple-epic; }
+            &:nth-child(4) { background: @maple-unique; }
+            &:nth-child(5) { background: @maple-legendary; }
+        }
+    }
+}
+
+.board {
+    .articles {
+        .slow-hover:hover {
+            background: @maple-rare;
+            color: #fff !important;
+        }
+
+        .selected {
+            background: @maple-epic !important;
+            color: #fff !important;
+        }
+    }
+
+    .article {
+        background: #fff;
+
+        .article-header {
+            background: @maple-unique;
+        }
+    }
+
+    .write-reply {
+        border-top: 1px solid lightgray;
+        padding: 16px 8px;
+    }
+}

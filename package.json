@@ -1,0 +1,29 @@
+{
+    "name": "maplets_ssr",
+    "version": "1.0.0",
+    "description": "Maplets integrated with NuxtJS",
+    "author": "Chanho Kim <kispi@naver.com>",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+        "precommit": "npm run lint"
+    },
+    "dependencies": {
+        "nuxt": "^2.0.0",
+        "axios": "^0.18.0",
+        "vue-moment": "^4.0.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^4.19.1",
+        "eslint-friendly-formatter": "^4.0.1",
+        "eslint-loader": "^2.1.1",
+        "eslint-plugin-vue": "^4.0.0",
+        "less": "^3.9.0",
+        "less-loader": "^4.0.5"
+    }
+}

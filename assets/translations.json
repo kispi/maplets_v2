@@ -1,0 +1,575 @@
+{
+
+    "CONFIRM": {
+        "en": "Confirm",
+        "kr": "확인"
+    },
+    "DELETE_ARTICLE_TITLE": {
+        "en": "Delete the article",
+        "kr": "게시물을 삭제합니다"
+    },
+    "ENTER_PASSWORD": {
+        "en": "Enter the password",
+        "kr": "비밀번호를 입력하세요"
+    },
+    "CANCEL": {
+        "en": "Cancel",
+        "kr": "취소"
+    },
+    "EDIT": {
+        "en": "Edit",
+        "kr": "수정"
+    },
+    "DELETE": {
+        "en": "Delete",
+        "kr": "삭제"
+    },
+    "ERROR_WORLD_REQUIRED": {
+        "en": "Please select world",
+        "kr": "월드를 선택해주세요"
+    },
+    "ERROR_NICKNAME_REQUIRED": {
+        "en": "Please type nickname",
+        "kr": "닉네임을 입력해주세요"
+    },
+    "ERROR_NICKNAME_INVALID": {
+        "en": "Invalid nickname",
+        "kr": "올바르지 않은 닉네임입니다"
+    },
+    "ERROR_NICKNAME_EXCEEDED": {
+        "en": "Too long nickname",
+        "kr": "닉네임이 너무 깁니다"
+    },
+    "ERROR_SELF_WHISPER": {
+        "en": "You can't whisper to yourself",
+        "kr": "자기 자신에게는 귓속말을 할 수 없습니다"
+    },
+    "ARTICLE_NOT_EXIST": {
+        "en": "Article doesn't exist",
+        "kr": "존재하지 않는 게시물입니다"
+    },
+    "NICKNAME_ARLEADY_EXIST": {
+        "en": "Nickname already exists",
+        "kr": "이미 존재하는 닉네임입니다"
+    },
+    "INVALID_AUTH_TOKEN": {
+        "en": "Invalid Access. Please refresh the page!",
+        "kr": "유효하지 않은 접근입니다. 브라우저를 새로고침해주세요!"
+    },
+    "INVALID_USER_INFO": {
+        "en": "Please set the nickname and the world first",
+        "kr": "닉네임과 월드를 먼저 설정해주세요"
+    },
+    "USER_NOT_FOUND": {
+        "en": "Couldn't find the user '%s'",
+        "kr": "'%s'님을 찾지 못했습니다"
+    },
+    "DISCONNECTED": {
+        "en": "Disconnected with the chat server",
+        "kr": "채팅서버와의 연결이 끊어졌습니다"
+    },
+    "RECONNECT": {
+        "en": "Reconnect",
+        "kr": "재접속"
+    },
+    "CONNECTED": {
+        "en": "Connected with the chat server",
+        "kr": "채팅서버와 연결되었습니다"
+    },
+    "STARFORCE": {
+        "en": "Starforce",
+        "kr": "스타포스"
+    },
+    "CALC_NORMAL": {
+        "en": "Normal",
+        "kr": "일반"
+    },
+    "CALC_REVERSE": {
+        "en": "Reverse",
+        "kr": "역계산"
+    },
+    "REQ_LEVS": {
+        "en": "Required Levels",
+        "kr": "레벨 제한"
+    },
+    "LEV_LTE_120": {
+        "en": "...120",
+        "kr": "...120"
+    },
+    "BASIC": {
+        "en": "Basic AD (AP)",
+        "kr": "기본"
+    },
+    "BONUS": {
+        "en": "Bonus",
+        "kr": "추옵"
+    },
+    "SCROLL": {
+        "en": "By Scroll",
+        "kr": "주문서 상승치"
+    },
+    "TOTAL": {
+        "en": "Total",
+        "kr": "총"
+    },
+    "SUCCESS": {
+        "en": "Success",
+        "kr": "성공했습니다"
+    },
+    "INVALID_PASSWORD": {
+        "en": "Invalid password",
+        "kr": "비밀번호가 올바르지 않습니다"
+    },
+    "FAILED": {
+        "en": "Failed",
+        "kr": "실패했습니다"
+    },
+    "SAVED": {
+        "en": "Saved",
+        "kr": "저장되었습니다"
+    },
+    "DELETED": {
+        "en": "Deleted",
+        "kr": "삭제되었습니다"
+    },
+    "DELETE_FAILED": {
+        "en": "Delete Failed. Check the password.",
+        "kr": "삭제에 실패하였습니다. 비밀번호를 확인해주세요."
+    },
+    "WRITE": {
+        "en": "Write",
+        "kr": "글쓰기"
+    },
+    "CREATOR": {
+        "en": "Creator",
+        "kr": "제작자"
+    },
+    "VIEW_MAPLE_GG": {
+        "en": "View maple.gg",
+        "kr": "maple.gg 보기"
+    },
+    "LANGUAGE": {
+        "en": "Language",
+        "kr": "언어"
+    },
+    "KOREAN": {
+        "en": "Korean",
+        "kr": "한국어"
+    },
+    "ENGLISH": {
+        "en": "English",
+        "kr": "영어"
+    },
+    "SHOW_BACKGROUND": {
+        "en": "Show Background",
+        "kr": "배경 보이기"
+    },
+    "HIDE_BACKGROUND": {
+        "en": "Hide Background",
+        "kr": "배경 감추기"
+    },
+    "SHOW_CHAT": {
+        "en": "Show Chat",
+        "kr": "채팅 보이기"
+    },
+    "HIDE_CHAT": {
+        "en": "Hide Chat",
+        "kr": "채팅 가리기"
+    },
+    "STARFORCE_WEAPON": {
+        "en": "Weapon",
+        "kr": "무기"
+    },
+    "STARFORCE_ARMOR": {
+        "en": "Armor",
+        "kr": "방어구"
+    },
+    "STARFORCE_GLOVE": {
+        "en": "Glove",
+        "kr": "장갑"
+    },
+    "SETTINGS": {
+        "en": "Settings",
+        "kr": "설정"
+    },
+    "SAVE": {
+        "en": "Save",
+        "kr": "저장"
+    },
+    "PASSWORD": {
+        "en": "Password",
+        "kr": "비밀번호"
+    },
+    "REPLY": {
+        "en": "Reply",
+        "kr": "댓글"
+    },
+    "WRITE_REPLY_PLACEHOLDER": {
+        "en": "Write reply.",
+        "kr": "댓글을 입력해주세요."
+    },
+    "WRITE_TITLE_PLACEHOLDER": {
+        "en": "Write the title",
+        "kr": "제목을 입력해주세요"
+    },
+    "WRITE_TEXT_PLACEHOLDER": {
+        "en": "Write the text (You're allowed to use img tag)",
+        "kr": "본문을 입력해주세요. (img 태그는 사용 가능합니다.)"
+    },
+    "ERROR_REQUIRED_FIELDS": {
+        "en": "Fill all input fields",
+        "kr": "모든 항목을 입력해주세요"
+    },
+    "ERROR_WRITE_ARTICLE": {
+        "en": "Invalid password or access",
+        "kr": "비밀번호가 잘못되었거나 잘못된 접근입니다"
+    },
+    "VIEWS": {
+        "en": "Views",
+        "kr": "조회"
+    },
+    "ABILITY": {
+        "en": "Ability",
+        "kr": "어빌리티"
+    },
+    "ABILITY_TXT": {
+        "en": "You'd better see this page in horizontal view, if you're using mobile device.",
+        "kr": "폰으로 보시는 경우, 화면을 가로로 하시면 좋습니다"
+    },
+    "RARE": {
+        "en": "Rare",
+        "kr": "레어"
+    },
+    "EPIC": {
+        "en": "Epic",
+        "kr": "에픽"
+    },
+    "UNIQUE": {
+        "en": "Unique",
+        "kr": "유니크"
+    },
+    "LEGENDARY": {
+        "en": "Legendary",
+        "kr": "레전드리"
+    },
+    "PRIMARY_STAT_N": {
+        "en": "Stat Increased by n",
+        "kr": "스탯 n 증가"
+    },
+    "ALL_STAT_N": {
+        "en": "All Stats Increased by n",
+        "kr": "모든 능력치 n 증가"
+    },
+    "PRIMARY_SECONDARY_N_M": {
+        "en": "Stat1, Stat2 Increased by n, m",
+        "kr": "스탯1 n 증가, 스탯2 m 증가"
+    },
+    "N_PERCENT_OF_PRIMARY_POINTS": {
+        "en": "n% of Stat1 to Stat2 Conversion",
+        "kr": "AP를 직접 투자한 스탯1의 n%만큼 스탯2 증가"
+    },
+    "MAX_HP_N": {
+        "en": "HP Increased by n",
+        "kr": "최대 HP n 증가"
+    },
+    "MAX_MP_N": {
+        "en": "MP Increased by n",
+        "kr": "최대 MP n 증가"
+    },
+    "DEFENSE_N": {
+        "en": "DEF Increased by n",
+        "kr": "방어력 n 증가"
+    },
+    "DAMAGE_N": {
+        "en": "Damage Increased by n% to Normal Monsters",
+        "kr": "일반 몬스터 공격 시 데미지 n% 증가"
+    },
+    "DEBUFFED_N": {
+        "en": "Damage Increase to Monster with Abnormal Status",
+        "kr": "기절이나 암흑, 결빙에 걸린 대상 공격시 데미지 n% 증가"
+    },
+    "BUFF_LENGTH_N": {
+        "en": "Buff Duration Increased by n%",
+        "kr": "버프 지속시간 n% 증가"
+    },
+    "INCREASED_MESO": {
+        "en": "Meso Obtained Increased by n%",
+        "kr": "메소 획득량 n% 증가"
+    },
+    "INCREASED_ITEM": {
+        "en": "Item Drop Rate Increased by n%",
+        "kr": "아이템 획득 확률 n% 증가"
+    },
+    "MOVEMENT_N": {
+        "en": "Movement Speed Increased by n",
+        "kr": "이동속도 n 증가"
+    },
+    "JUMP_N": {
+        "en": "Jump Increased by n",
+        "kr": "점프력 n 증가"
+    },
+    "AD_N": {
+        "en": "Weapon ATT Increased by n",
+        "kr": "공격력 n 증가"
+    },
+    "AP_N": {
+        "en": "Magic ATT Increased by n",
+        "kr": "마력 n 증가"
+    },
+    "CRITICAL_RATE": {
+        "en": "Critical Rate Increased by n%",
+        "kr": "크리티컬 확률 n% 증가"
+    },
+    "EVADE_RATE": {
+        "en": "Avoidability Boosted by n%",
+        "kr": "회피율 n% 증가"
+    },
+    "MAX_HP_PER": {
+        "en": "HP Increased by n%",
+        "kr": "최대 HP n% 증가"
+    },
+    "MAX_MP_PER": {
+        "en": "MP Increased by n%",
+        "kr": "최대 MP n% 증가"
+    },
+    "DEFENSE_PER": {
+        "en": "DEF Increased by n%",
+        "kr": "방어력 n% 증가"
+    },
+    "DEF_TO_DAMAGE": {
+        "en": "n% of DEF to Damage Conversion",
+        "kr": "방어력의 n%만큼 데미지 고정값 증가"
+    },
+    "RESET_COOLTIME_RATE": {
+        "en": "Cooldown Skip Chance by n%",
+        "kr": "스킬 사용 시 n% 확률로 재사용 대기시간 초기화"
+    },
+    "BOSS_DAMAGE": {
+        "en": "Damage to Boss Monsters Increased by n%",
+        "kr": "보스 몬스터 공격 시 데미지 n% 증가"
+    },
+    "AD_PER_LEV": {
+        "en": "Weapon ATT Increased by Every n Level",
+        "kr": "n 레벨마다 공격력 1 증가"
+    },
+    "AP_PER_LEV": {
+        "en": "Magic ATT Increased by Every n Level",
+        "kr": "n 레벨마다 마력 1 증가"
+    },
+    "AS_N": {
+        "en": "Attack Speed Increased by n",
+        "kr": "공격 속도 n단계 상승"
+    },
+    "INCREASED_TARGET_N": {
+        "en": "Attack Skill Target Increased by n",
+        "kr": "다수 공격 스킬의 공격 대상 n 증가"
+    },
+    "PASSIVE_LEV_N": {
+        "en": "Passive Skill Level Increased by n",
+        "kr": "패시브 스킬 레벨 n 증가"
+    },
+    "BOARD": {
+        "en": "Board",
+        "kr": "자유게시판"
+    },
+    "ABOUT": {
+        "en": "About",
+        "kr": "정보"
+    },
+    "CHAT_HELP": {
+        "en": "- Select the world and nickname.<br>- We don't ensure the chatter is the real owner of the nickname since there is no authentication yet.<br>- Messages are shown up to number 200.<br>- Messages are not saved so if you restart the ap they're gone.",
+        "kr": "- 월드와 닉네임을 선택하세요.<br>- 아직은 인증을 위한 수단이 없어, 실제 인물임을 보장할 수 없습니다. 사칭에 유의하세요.<br>- 대화내역은 최대 200개까지 노출됩니다.<br>- 대화내역은 저장되지 않으며, 앱을 재시작하면 사라집니다."
+    },
+    "SET_NICKNAME": {
+        "en": "Setnick",
+        "kr": "닉설정"
+    },
+    "CLEAR": {
+        "en": "Clear",
+        "kr": "지우기"
+    },
+    "SEND": {
+        "en": "Send",
+        "kr": "보내기"
+    },
+    "TYPE_CHAT_PARTNER": {
+        "en": "Type nickname.",
+        "kr": "귓속말 상대를 입력하세요."
+    },
+    "ITEM": {
+        "en": "Item",
+        "kr": "아확"
+    },
+    "NORMAL": {
+        "en": "Normal",
+        "kr": "고확"
+    },
+    "MEGAPHONE": {
+        "en": "Megaphone",
+        "kr": "메가폰"
+    },
+    "WHISPER": {
+        "en": "Whisper",
+        "kr": "귓속말"
+    },
+    "NICKNAME": {
+        "en": "Nickname",
+        "kr": "닉네임"
+    },
+    "COMMUNITY": {
+        "en": "Comunity",
+        "kr": "커뮤니티"
+    },
+    "CHAT": {
+        "en": "Chat",
+        "kr": "채팅"
+    },
+    "NONE": {
+        "en": "None",
+        "kr": "선택안함"
+    },
+    "ALL": {
+        "en": "ALL",
+        "kr": "전체"
+    },
+    "SCANIA": {
+        "en": "Scania",
+        "kr": "스카니아"
+    },
+    "BERA": {
+        "en": "Bera",
+        "kr": "베라"
+    },
+    "ZENITH": {
+        "en": "Zenith",
+        "kr": "제니스"
+    },
+    "CROA": {
+        "en": "Croa",
+        "kr": "크로아"
+    },
+    "RED": {
+        "en": "Red",
+        "kr": "레드"
+    },
+    "AURORA": {
+        "en": "Aurora",
+        "kr": "오로라"
+    },
+    "ARCANE": {
+        "en": "Arcane",
+        "kr": "아케인"
+    },
+    "NOVA": {
+        "en": "Nova",
+        "kr": "노바"
+    },
+    "ENOSIS": {
+        "en": "Enosis",
+        "kr": "이노시스"
+    },
+    "UNION": {
+        "en": "Union",
+        "kr": "유니온"
+    },
+    "ELYSIUM": {
+        "en": "Elysium",
+        "kr": "엘리시움"
+    },
+    "LUNA": {
+        "en": "Luna",
+        "kr": "루나"
+    },
+    "REBOOT_1": {
+        "en": "Reboot 1",
+        "kr": "리부트 1"
+    },
+    "REBOOT_2": {
+        "en": "Reboot 2",
+        "kr": "리부트 2"
+    },
+    "ABOUT_MAPLETS_1": {
+        "en": " 'MAPLETs' is the combined word of 'Maplestory', and 'Applet'(small application)",
+        "kr": " '메이플릿츠'는 '메이플스토리'와 작은 응용프로그램을 의미하는 '애플릿'의 복수형의 합성어입니다."
+    },
+    "ABOUT_MAPLETS_2": {
+        "en": " The purpose of this project is to gather many existing utilities for Maplestory that are scattered around the internet or being as an excel file, and to re-implement and to put user-friendly UX/UI on them.",
+        "kr": " 이 프로젝트의 목표는, 현재 인터넷 사이트, 또는 엑셀 파일로 중구난방으로 존재하는 여러가지 프로그램들을 정리, 재구현해서 한 곳으로 모으고 사용자 친화적인 UX/UI를 도입하는 것입니다."
+    },
+    "ABOUT_MAPLETS_3": {
+        "en": " Starforce calculator is listed as the first feature, another features like arcane force caculator will be coming soon.",
+        "kr": " 현재 스타포스 계산기가 첫 기능으로 제공되었으며, 추후에 아케인 포스 계산기 등 다른 기능들이 업데이트 될 예정입니다."
+    },
+    "ABOUT_MAPLETS_4": {
+        "en": " I have my full-time job in my company, so the roadmap could end up as just a roadmap.",
+        "kr": " 전시간 직장에 종사하고 있기 때문에, 개발이 계획대로 진척되지 않을 수 있습니다."
+    },
+    "IMPOSSIBLE": {
+        "en": "Impossible",
+        "kr": "불가능"
+    },
+    "IMPOSSIBLE_INST": {
+        "en": "How did you do that? Doesn't make sense... Please change the total AD little bit.",
+        "kr": "ㄹㅇ? 뭔가 이상한데... 총 공격력(마력)을 살짝 조정해보세요."
+    },
+    "MAYBE_INCORRECT": {
+        "en": "Maybe incorrect",
+        "kr": "확실하지 않습니다"
+    },
+    "MAYBE_INCORRECT_TXT": {
+        "en": "Value for 25 stars maybe incorrect",
+        "kr": "25성은 정확하지 않을 수 있습니다"
+    },
+    "DATEPICKER_RANGETYPE_TODAY": {
+        "en": "Today (By Day)",
+        "kr": "오늘"
+    },
+    "DATEPICKER_RANGETYPE_WEEK": {
+        "en": "Last 7 Days",
+        "kr": "최근 7일"
+    },
+    "DATEPICKER_RANGETYPE_MONTH": {
+        "en": "Last 30 Days",
+        "kr": "최근 30일"
+    },
+    "CUSTOM": {
+        "en": "Custom",
+        "kr": "커스텀"
+    },
+    "TO_LEV": {
+        "en": "To lev %s",
+        "kr": "%s 레벨까지"
+    },
+    "SET_LEVEL_HERE": {
+        "en": "Set Level here",
+        "kr": "레벨을 선택하세요"
+    },
+    "LEVEL": {
+        "en": "Level",
+        "kr": "레벨"
+    },
+    "FORMULA": {
+        "en": "Formula",
+        "kr": "공식"
+    },
+    "NEEDED_EXP": {
+        "en": "Needed Exp",
+        "kr": "필요 성장치"
+    },
+    "ACCUMULATED": {
+        "en": "Accumulated",
+        "kr": "누적"
+    },
+    "NEEDED_FEE": {
+        "en": "Needed Fee",
+        "kr": "필요 비용"
+    },
+    "VANISHING_ROAD": {
+        "en": "Vanishing Road",
+        "kr": "소멸의 여로"
+    },
+    "OTHER_AREAS": {
+        "en": "Other Areas",
+        "kr": "그 외 지역"
+    }
+}

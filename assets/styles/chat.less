@@ -1,0 +1,103 @@
+@maple-item-label: rgba(102, 68, 238, 1);
+@maple-modal-ingame: rgba(37, 151, 203, 1);
+@maple-modal-ingame-button: rgba(170, 221, 0, 1);
+@chat-window-border: rgba(20, 24, 26, 1);
+@font-size-chat: 16px;
+
+.ms-megaphone {
+    background: rgba(255, 136, 238, 0.2);
+    color: rgba(255, 136, 238, 1);
+}
+
+.ms-normal {
+    background: rgba(228, 166, 199, 1);
+    color: rgba(119, 0, 68, 1);
+}
+
+.ms-item {
+    background: rgba(255, 204, 0, 1);
+    color: rgba(68, 34, 0, 1);
+}
+
+.ms-whisper {
+    background: none;
+    color: rgba(0, 255, 0, 1);
+}
+
+.ms-friend {
+    background: none;
+    color: rgba(255, 153, 0, 1);
+}
+
+.ms-error {
+    background: none;
+    color: rgba(205, 147, 148, 1);
+}
+
+.chat {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .chat-buttons {
+        padding: 4px;
+
+        .overlay {
+            background: rgba(41, 48, 52, 0.75);
+        }
+
+        button {
+            background: @maple-modal-ingame-button;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .chat-upper {
+        resize: vertical;
+        background: rgba(41, 48, 52, 0.75);
+        border: 1px solid gray;
+        
+        .chat-window, .chat-users {
+            height: 120px;
+            min-height: 88px;
+            max-height: 80vh;
+            overflow-y: scroll;
+            font-size: @font-size-chat;
+            line-height: @font-size-chat;
+        }
+    }    
+
+    .chat-status {
+        background: rgba(41, 48, 52, 0.75);
+        padding: 1px;
+
+        .chat-type, button {
+            border-radius: 2px;
+            padding: 2px;
+            box-shadow: inset 0 0 16px @chat-window-border;
+            color: #fff;
+            cursor: pointer;
+            min-height: initial !important;
+            background: none;
+            font-size: @font-size-chat;
+            line-height: @font-size-chat;
+        }
+
+        input {
+            color: #fff;
+            border: 1px solid @chat-window-border !important;
+            border-radius: 0 !important;
+            background: none !important;
+            font-size: @font-size-chat;
+            padding: 2px !important;
+        }
+
+        .chat-type, button, input {
+            font-family: Gulim;
+        }
+    }
+}
