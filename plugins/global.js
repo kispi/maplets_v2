@@ -1,4 +1,3 @@
-import * as $store from '@/store'
 import * as $http from 'axios'
 import VueMoment from 'vue-moment'
 import Vue from 'vue'
@@ -11,24 +10,35 @@ export const Translate = {
     }
 };
 
+export const Loading = {
+    install(Vue) {
+        Vue.prototype.$loading = function(show) {
+            $nuxt.$emit('onSetLoading', show)
+        }
+    }
+}
+
 export const Toast = {
     install(Vue) {
+        let emitToast = function(msg, bgClass) {
+            $nuxt.$emit('onToast', {
+                message: msg,
+                class: bgClass
+            })
+        }
         Vue.prototype.$toast = {
-            success: function(message) {
-                $store.default().dispatch("setToast", {
-                    message,
-                    type: "success"
-                })
+            success(msg) {
+                emitToast(msg, "bgm-accent")
             },
-            error: function(message) {
-                $store.default().dispatch("setToast", {
-                    message,
-                    type: "error"
-                })
+            error(msg) {
+                emitToast(msg, "bgm-danger")
+            },
+            warning(msg) {
+                emitToast(msg, "bgm-warning")
             }
         }
     }
-};
+}
 
 export const Shake = {
     install(Vue) {
@@ -47,16 +57,6 @@ export const numArray = {
     install(Vue) {
         Vue.prototype.$numArray = function(len) {
             return Array.apply(null, { length: len }).map(Number.call, Number)
-        }
-    }
-};
-
-export const Loading = {
-    install(Vue) {
-        Vue.prototype.$loading = async function(payload) {
-            if (payload === true || payload === false) {
-                await $store.default().dispatch("setLoading", payload);
-            }
         }
     }
 };

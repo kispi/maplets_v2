@@ -5,13 +5,8 @@
             v-if="toast.show">
             <div
                 class="toast shadow"
-                :class="{'bgm-green': toast.type === 'success', 'bgm-red': toast.type === 'error'}"
-                @click.stop="toastClicked">
+                :class="toast.class">
                 <div v-html="html" />
-                <i
-                    class="zmdi zmdi-close"
-                    v-if="toast.type === 'dismiss'"
-                    @click="dismiss"/>
             </div>
         </div>
     </transition>
@@ -19,43 +14,35 @@
 
 <script>
 export default {
+    data: () => ({
+        toast: {
+            message: null,
+            class: null,
+            show: false,
+        }
+    }),
     methods: {
-        dismiss() {
-            this.$store.dispatch("removeToast");
-        },
-        toastClicked() {},
+        resetToast() {
+            this.toast.message = null
+            this.toast.class = null
+            this.toast.show = false
+        }
     },
     computed: {
-        showToast() {
-            return this.toast.show;
-        },
-        toast() {
-            return this.$store.getters.toast
-        },
         html() {
-            if (this.toast.message) {
-                return this.$translate(this.toast.message).replace(/\n/g, "<br>")
-            }
-        }
+            return this.$translate(this.toast.message.replace(/\n/g, "<br>"));
+        },
     },
-    watch: {
-        showToast() {
-            if (this.toast.show) {
-                if (this.toastTimeout) {
-                    clearTimeout(this.toastTimeout);
-                }
-                switch (this.toast.type) {
-                    case "dismiss":
-                        break;
-                    default:
-                        this.toastTimeout = setTimeout(() => {
-                            this.$store.dispatch("removeToast");
-                        }, 1500);
-                }
-            }
-        }
+    mounted() {
+        this.$nuxt.$on('onToast', payload => {
+            payload.message = payload.message.trim();
+            this.toast = payload
+            this.toast.show = true
+
+            var toastTimeout = setTimeout(() => {
+                this.resetToast()
+            }, 1000)
+        })
     },
 };
 </script>
-<style scoped lang="less">
-</style>

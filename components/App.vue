@@ -15,9 +15,7 @@
 
         <Toast/>
         <Chat/>
-        <div class="app-loading" v-if="loading && shouldShowLoading">
-            <ProgressView />
-        </div>
+        <Loading/>
 
     </div>
 </template>
@@ -25,28 +23,15 @@
 <script>
 import Menu from '@/components/Menu'
 import Chat from '@/components/chat/Chat'
-import Toast from '@/components/app/Toast';
-import ProgressView from '@/components/app/ProgressView';
+import Loading from '@/components/app/Loading'
+import Toast from '@/components/app/Toast'
 
 export default {
     components: {
         Menu,
         Chat,
-        ProgressView,
-        Toast
-    },
-    data: () => ({
-        shouldShowLoading: false,
-    }),
-    watch: {
-        loading() {
-            this.shouldShowLoading = false;
-            if (this.loading) {
-                setTimeout(() => {
-                    this.shouldShowLoading = true;
-                }, 150);
-            }
-        }
+        Loading,
+        Toast,
     },
     name: 'App',
     methods: {
@@ -54,10 +39,10 @@ export default {
             this.$router.push("/")
         }
     },
+    mounted() {
+        this.$loading(true)
+    },
     computed: {
-        loading() {
-            return this.$store.getters.loading;
-        },
         background() {
             if (this.$store.getters.background === "hide") return;
 
@@ -87,18 +72,5 @@ export default {
 <style lang="less">
 #app {
     padding: 16px;
-}
-
-.app-loading {
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    z-index: 20;
 }
 </style>
