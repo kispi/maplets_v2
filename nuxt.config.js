@@ -26,7 +26,7 @@ const config = {
     ],
     plugins: [
         { src: '~/plugins/filters.js', ssr: true },
-        { src: '~/plugins/ga.js', ssr: true },
+        { src: '~/plugins/ga.js', ssr: false },
         { src: '~/plugins/axios.js', ssr: true },
         { src: '~/plugins/global.js', ssr: true },
         { src: '~/plugins/querybuilder.js', ssr: true },

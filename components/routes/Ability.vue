@@ -27,10 +27,12 @@ export default {
         showOrientInstruction: null,
     }),
     created() {
-        window.addEventListener('resize', this.setShowOrientInstruction)
+        if (process.client)
+            window.addEventListener('resize', this.setShowOrientInstruction)
     },
     beforeDestroy() {
-        window.removeEventListener('resize', this.setShowOrientInstruction)
+        if (process.client)
+            window.removeEventListener('resize', this.setShowOrientInstruction)
     },
     computed: {
         keys() {
