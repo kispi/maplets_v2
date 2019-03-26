@@ -1,6 +1,6 @@
-import * as $http from 'axios'
 import VueMoment from 'vue-moment'
 import Vue from 'vue'
+import api from './api'
 
 export const Translate = {
     install(Vue, options) {
@@ -94,22 +94,7 @@ export const IP = {
 
 export const Api = {
     install(Vue) {
-        Vue.prototype.$api = async function(method, endpoint, params, payload) {
-            let apiUrl = process.env.VUE_APP_API_URL
-            let m = method.toLowerCase()
-            if (m === "get") {
-                return await $http.get(apiUrl + endpoint, { params })
-            }
-            if (m === "post") {
-                return await $http.post(apiUrl + endpoint, payload)
-            }
-            if (m === "put") {
-                return await $http.put(apiUrl + endpoint, payload)
-            }
-            if (m === "delete") {
-                return await $http.delete(apiUrl + endpoint)
-            }
-        }
+        Vue.prototype.$api = api
     }
 }
 
