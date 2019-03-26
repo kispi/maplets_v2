@@ -87,7 +87,7 @@ export default {
                 }, {
                     timestamp: "2019-03-26",
                     jobs: [
-                        'Nuxt로 전환 완료, SEO 해결'
+                        'Nuxt로 전환 완료, SEO는 asyncData를 사용하도록 변경해야 해결'
                     ]
                 }
             ]
