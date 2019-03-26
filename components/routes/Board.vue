@@ -60,12 +60,10 @@ export default {
     }),
     components: { Article, ArticleHeader },//, Pagination },
     created() {
-        this.$nuxt.$on('onRepliesMutated', async () => {
-            this.reload();
-        })
+        this.$nuxt.$on('onRepliesMutated', this.reload)
     },
     beforeDestroy() {
-        this.$nuxt.$off('onRepliesMutated')
+        this.$nuxt.$off('onRepliesMutated', this.reload)
     },
     mounted() {
         this.init()
@@ -76,6 +74,10 @@ export default {
             this.reload();
         },
         async reload() {
+            if (!this.board) {
+                return
+            }
+
             let query = this.defaultQuery().offset(this.limit * this.selected).where("board_id", this.board.id);
             try {
                 await this.$store.dispatch('loadArticles', query.build())
