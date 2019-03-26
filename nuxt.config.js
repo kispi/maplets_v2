@@ -30,6 +30,7 @@ const config = {
         { src: '~/plugins/axios.js', ssr: true },
         { src: '~/plugins/global.js', ssr: true },
         { src: '~/plugins/querybuilder.js', ssr: true },
+        { src: '~/modules/arcane.js', ssr: true },
     ],
     dev: (process.env.NODE_ENV !== 'production'),
     /*

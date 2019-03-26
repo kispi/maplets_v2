@@ -52,7 +52,6 @@
 </template>
 
 <script>
-import arcane from '@/modules/arcane'
 import RadioButtons from '@/components/app/RadioButtons'
 
 export default {
@@ -62,23 +61,20 @@ export default {
     }),
     components: { RadioButtons },
     computed: {
-        arcaneCalculator() {
-            return arcane()
-        },
         neededLabel() {
             return this.$translate('TO_LEV').replace(/%s/g, this.lev)
         },
         numSymbols() {
-            return this.arcaneCalculator.exp(this.lev)
+            return this.$arcane.exp(this.lev)
         },
         totalNumSymbols() {
-            return this.arcaneCalculator.totalExp(this.lev)
+            return this.$arcane.totalExp(this.lev)
         },
         fee() {
-            return this.arcaneCalculator.fee(this.lev)
+            return this.$arcane.fee(this.lev)
         },
         totalFee() {
-            return this.arcaneCalculator.totalFee(this.lev)
+            return this.$arcane.totalFee(this.lev)
         },
         arcaneRivers() {
             return [{ title: "VANISHING_ROAD", value: 'vanishing_road' }, { title: "OTHER_AREAS", value: 'others' }]
