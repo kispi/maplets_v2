@@ -57,7 +57,7 @@ const config = {
     }
 }
 
-config.env.VUE_APP_CHAT_URL = config.dev ? "http://127.0.0.1:4600/v1/" : "http://api.kispi.net:4600/v1/"
-config.env.VUE_APP_API_URL = config.dev ? "http://127.0.0.1:4500/v1/" : "http://api.kispi.net:4600/v1/"
+config.env.VUE_APP_CHAT_URL = "http://127.0.0.1:4600/v1/"
+config.env.VUE_APP_API_URL = "http://127.0.0.1:4500/v1/"
 
 export default config
