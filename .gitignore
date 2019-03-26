@@ -9,3 +9,8 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# binaries
+chat/chat
+chat/debug
+chat/chat.exe
