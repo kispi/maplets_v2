@@ -27,7 +27,7 @@ export default {
     methods: {
         onClickArticle() {
             this.$router.push({
-                name: 'Board-ArticleId',
+                name: 'board-articleId',
                 params: { articleId: this.article.id }
             })
         },

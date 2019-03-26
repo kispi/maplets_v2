@@ -52,7 +52,7 @@ export default {
     methods: {
         onClickEdit() {
             this.$router.push({
-                name: 'Write-ArticleId',
+                name: 'board-write-articleId',
                 params: {
                     articleId: this.article.id
                 }
@@ -64,7 +64,7 @@ export default {
                     await this.$api("delete", "articles/" + this.article.id + "?password=" + this.password)
                     this.$toast.success("DELETED")
                     this.$router.push({
-                        name: "Board"
+                        name: "board"
                     })
                 } catch (e) {
                     this.$toast.error("DELETE_FAILED")

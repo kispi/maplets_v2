@@ -19,7 +19,6 @@ export default {
             for (let i = 0; i < Math.ceil((this.items || []).length / this.limit); i++) {
                 this.pages.push(i)
             }
-            console.log(this.pages)
         }
     }
 }

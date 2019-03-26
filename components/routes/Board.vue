@@ -58,7 +58,6 @@ export default {
         selected: 0,
         limit: -1,
     }),
-    props: ['articleId'],
     components: { Article, ArticleHeader },//, Pagination },
     created() {
         this.$nuxt.$on('onRepliesMutated', async () => {
@@ -85,11 +84,11 @@ export default {
             }
 
             try {
-                await this.$store.dispatch('loadArticle', this.articleId)
+                await this.$store.dispatch('loadArticle', this.$route.params.articleId)
             } catch (e) {
                 this.$toast.error("ARTICLE_NOT_EXIST")
                 this.$router.push({
-                    name: "Board"
+                    name: "board"
                 })
             }
             this.$scrollToTop();
@@ -100,7 +99,7 @@ export default {
         },
         onClickWrite() {
             this.$router.push({
-                name: "Write"
+                name: "board-write"
             })
         },
         defaultQuery() {

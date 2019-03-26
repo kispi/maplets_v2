@@ -66,7 +66,6 @@ import Modal from '@/components/modals/Modal'
 
 export default {
     name: "WriteArticle",
-    props: ['articleId'],
     data: () => ({
         article: {
             board: null,
@@ -143,14 +142,14 @@ export default {
                 this.$loading(true);
                 let posted;
                 if (this.passedArticle) {
-                    const resp = await this.$api("put", "articles/" + this.article.id, {}, this.article)
+                    const resp = await this.$api("put", "articles/" + this.$route.params.articleId, {}, this.article)
                     posted = resp.data.data
                 } else {
                     const resp = await this.$api("post", "articles", {}, this.article)
                     posted = resp.data.data
                 }
                 this.$toast.success("SAVED")
-                this.$router.push({ name: "Board-ArticleId", params: { articleId: posted.id } })
+                this.$router.push({ name: "board-articleId", params: { articleId: posted.id } })
             } catch (e) {
                 console.error(e)
                 this.$toast.error("FAILED")
@@ -159,14 +158,14 @@ export default {
             }
         },
         goBack() {
-            this.$router.push({ name: "Board-ArticleId", params: { articleId: this.article.id } })
+            this.$router.push({ name: "board-articleId", params: { articleId: this.$route.params.articleId } })
         },
         onCloseWriteArticlePassword() {
             this.goBack()            
         },
         async populateFromPassedArticle() {
             try {
-                const resp = await this.$api("get", "articles/" + this.articleId)
+                const resp = await this.$api("get", "articles/" + this.$route.params.articleId)
                 this.passedArticle = resp.data.data
                 if (this.passedArticle) {
                     this.article = this.passedArticle
@@ -176,7 +175,7 @@ export default {
         },
         async onClickConfirmPassword() {
             try {
-                const resp = await this.$api("post", "articles/" + this.articleId + "/checkPassword", {}, {
+                const resp = await this.$api("post", "articles/" + this.$route.params.articleId + "/checkPassword", {}, {
                     password: this.article.password
                 })
                 this.writeAllowed = resp.data.data === "success"
@@ -187,7 +186,7 @@ export default {
             }
         },
         async init() {
-            if (!this.articleId) {
+            if (!this.$route.params.articleId) {
                 this.writeAllowed = true
                 this.article.ip = this.$ip()
                 this.article.nickname = this.$store.getters.user.nickname

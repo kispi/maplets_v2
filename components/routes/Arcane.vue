@@ -85,11 +85,9 @@ export default {
         },
         selected: {
             get() {
-                console.log(this.$store.getters.selectedArcaneRiverArea)
                 return this.$store.getters.selectedArcaneRiverArea
             },
             set(area) {
-                this.$forceUpdate();
                 this.$store.commit('setArcaneRiverArea', area)
             }
         }

@@ -27,7 +27,7 @@ let mutations = {};
 })
 
 export default {
-    state,
+    state: () => state,
     getters,
     actions,
     mutations
