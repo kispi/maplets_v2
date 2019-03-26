@@ -1,13 +1,6 @@
-import * as $store from '@/store'
 import Vue from 'vue'
 
-export const translate = (key) => {
-    let t = $store.default().getters.translation
-    const locale = t.locale;
-    return (t.texts[key] || {})[locale] || key;
-}
-
-export const formatDate = (value, format) => {
+const formatDate = (value, format) => {
     if (value) {
         let d = Vue.prototype.$moment(String(value))
         if (format) {
@@ -27,7 +20,7 @@ export const formatDate = (value, format) => {
     }
 }
 
-export const currency = (value, decimalCount) => {
+const currency = (value, decimalCount) => {
     const digitsRegex = /(\d{3})(?=\d)/g
     value = parseFloat(value)
     if (!isFinite(value) || (!value && value !== 0)) return ''
@@ -47,14 +40,14 @@ export const currency = (value, decimalCount) => {
     return sign + head + integer.slice(i).replace(digitsRegex, '$1,') + decimals
 }
 
-export const ipFront = ip => {
+const ipFront = ip => {
     if (!ip) {
         return
     }
     return ip.split(".").slice(0, 2).join(".")
 }
 
-export const hasNicknameError = (nickname) => {
+const hasNicknameError = (nickname) => {
     if (!nickname) {
         return "ERROR_NICKNAME_REQUIRED"
     }
@@ -81,13 +74,21 @@ export const hasNicknameError = (nickname) => {
     return false
 }
 
-export const alphaNumeric = s => {
+const alphaNumeric = s => {
     return s.split("").every(c => /^[a-zA-Z0-9가-힣]+$/.test(c))
 }
 
-Vue.filter('translate', translate)
-Vue.filter('formatDate', formatDate)
-Vue.filter('currency', currency)
-Vue.filter('ipFront', ipFront)
-Vue.filter('hasNicknameError', hasNicknameError)
-Vue.filter('alphaNumeric', alphaNumeric)
+export default ({ app, store }, inject) => {
+    const translate = (key) => {
+        let t = store.getters.translation
+        return (t.texts[key] || {})[t.locale] || key;
+    }
+    inject('translate', translate)
+
+    Vue.filter('translate', translate)
+    Vue.filter('formatDate', formatDate)
+    Vue.filter('currency', currency)
+    Vue.filter('ipFront', ipFront)
+    Vue.filter('hasNicknameError', hasNicknameError)
+    Vue.filter('alphaNumeric', alphaNumeric)
+}

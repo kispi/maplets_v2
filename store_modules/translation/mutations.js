@@ -1,13 +1,13 @@
 export default {
-    setTranslation(state, payload) {
+    setLocale(state, payload) {
         if (!payload) {
             return
         }
 
-        if (payload.locale !== undefined) {
-            state.translation.locale = payload.locale
+        if (payload !== undefined) {
+            state.translation.locale = payload
             if (process.client)
-                window.localStorage.setItem("locale", payload.locale)
+                window.localStorage.setItem("locale", payload)
         }
     },
 };

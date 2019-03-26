@@ -32,7 +32,7 @@ export default {
                 return this.$store.getters.translation.locale
             },
             set(langVal) {
-                this.$store.dispatch('setLocale', langVal)
+                this.$store.commit('setLocale', langVal)
             }
         },
         backgroundOption() {
