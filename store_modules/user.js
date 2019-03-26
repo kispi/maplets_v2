@@ -17,9 +17,9 @@ const newUser = _ => {
     }
 }
 
-const state = () => ({
+const state = {
     user: storedUser || newUser()
-})
+}
 
 const getters = {
     user(state) {

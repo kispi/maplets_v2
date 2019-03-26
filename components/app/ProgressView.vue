@@ -1,6 +1,6 @@
 <template>
     <div class="text-center">
-        <Preloader />
+        <Preloader/>
     </div>
 </template>
 

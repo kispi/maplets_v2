@@ -1,7 +1,6 @@
-import {
-    store as $store
-} from '@/store'
+import * as $store from '@/store'
 import * as $http from 'axios'
+import VueMoment from 'vue-moment'
 import Vue from 'vue'
 
 export const Translate = {
@@ -16,13 +15,13 @@ export const Toast = {
     install(Vue) {
         Vue.prototype.$toast = {
             success: function(message) {
-                $store.dispatch("setToast", {
+                $store.default().dispatch("setToast", {
                     message,
                     type: "success"
                 })
             },
             error: function(message) {
-                $store.dispatch("setToast", {
+                $store.default().dispatch("setToast", {
                     message,
                     type: "error"
                 })
@@ -56,7 +55,7 @@ export const Loading = {
     install(Vue) {
         Vue.prototype.$loading = async function(payload) {
             if (payload === true || payload === false) {
-                await $store.dispatch("setLoading", payload);
+                await $store.default().dispatch("setLoading", payload);
             }
         }
     }
@@ -123,3 +122,4 @@ Vue.use(ScrollToTop)
 Vue.use(Copy)
 Vue.use(IP)
 Vue.use(Api)
+Vue.use(VueMoment)

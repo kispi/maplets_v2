@@ -290,6 +290,7 @@ export default {
         position: absolute;
         left: 0;
         right: 0;
+        margin-bottom: 160px;
     }
 
     .selector .selected-item {

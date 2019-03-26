@@ -1,5 +1,5 @@
 <template>
-    <Arcen/>
+    <Arcane/>
 </template>
 
 <script>

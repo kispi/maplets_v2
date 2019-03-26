@@ -3,6 +3,7 @@ export default {
         if (!payload) {
             return
         }
+
         if (payload.locale !== undefined) {
             state.translation.locale = payload.locale
             if (process.client)

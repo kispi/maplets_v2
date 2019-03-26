@@ -13,12 +13,12 @@ if (supportedLocales.indexOf(storedLocale) !== -1) {
 }
 
 export default {
-    state: () => ({
+    state: {
         translation: {
             locale,
             texts: json
         }
-    }),
+    },
     getters,
     mutations,
     actions

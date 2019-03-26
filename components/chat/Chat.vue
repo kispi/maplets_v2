@@ -85,8 +85,7 @@ export default {
     computed: {
         user: {
             get() {
-                console.log(this.$store.getters)
-                return this.$store.getters['user/user']
+                return this.$store.getters.user
             },
             set(user) {
                 this.$store.dispatch('setUser', user)

@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 const QueryBuilder = {
     install(Vue, options) {
         Vue.prototype.$qb = function() {
@@ -151,5 +153,7 @@ const QueryBuilder = {
         }
     }
 };
+
+Vue.use(QueryBuilder)
 
 export default QueryBuilder;

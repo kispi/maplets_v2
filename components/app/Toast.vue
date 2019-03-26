@@ -21,7 +21,6 @@
 export default {
     methods: {
         dismiss() {
-            console.log(this.$store.actions)
             this.$store.dispatch("removeToast");
         },
         toastClicked() {},
@@ -31,7 +30,7 @@ export default {
             return this.toast.show;
         },
         toast() {
-            return this.$store.getters['app/app/toast'];
+            return this.$store.getters.toast
         },
         html() {
             if (this.toast.message) {

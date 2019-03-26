@@ -1,10 +1,10 @@
 import Vue from 'vue'
 
-const state = () => ({
+const state = {
     board: null,
     articles: null,
     article: null,
-})
+}
 
 const getters = {
     board: state => state.board,

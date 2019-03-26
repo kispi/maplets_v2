@@ -1,11 +1,8 @@
-import {
-    store as $store
-} from '@/store'
+import * as $store from '@/store'
 import Vue from 'vue'
 
 export const translate = (key) => {
-    console.log($store.getters)
-    let t = $store.getters['translation']
+    let t = $store.default().getters.translation
     const locale = t.locale;
     return (t.texts[key] || {})[locale] || key;
 }

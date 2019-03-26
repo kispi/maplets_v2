@@ -52,16 +52,16 @@ export default {
     methods: {
         onClickTitle() {
             this.$router.push({
-                name: "Main"
+                name: "index"
             })
         }
     },
     computed: {
         loading() {
-            return this.$store.getters['app/app/loading'];
+            return this.$store.getters.loading;
         },
         background() {
-            if (this.$store.getters['app/app/background'] === "hide") return;
+            if (this.$store.getters.background === "hide") return;
 
             let idx = Math.floor(Math.random() * this.backgrounds.length);
             let result = "background-image: url('" + this.backgrounds[idx].img + "');";

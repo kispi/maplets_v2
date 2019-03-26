@@ -1,10 +1,10 @@
-import { store as $store } from '../store' 
+import * as $store from '@/store'
 
 const arcaneSymbol = {
     requiredExp: [137840000],
 }
 for (let i = 1; i < 20; i++) {
-    arcaneSymbol.requiredExp.push(i*i + 11)
+    arcaneSymbol.requiredExp.push(i * i + 11)
 }
 
 const arcane = function() {
@@ -23,7 +23,7 @@ const arcane = function() {
         },
         fee: function(lev) {
             arcaneSymbol.requiredFee = [137840000]
-            let area = $store.getters.selectedArcaneRiverArea;
+            let area = $store.default().getters.selectedArcaneRiverArea;
             for (let i = 1; i < 20; i++) {
                 arcaneSymbol.requiredFee.push(
                     arcaneSymbol.requiredFee[i - 1] - (area !== 'vanishing_road' ? 6600000 : 7130000))

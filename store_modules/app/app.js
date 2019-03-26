@@ -1,5 +1,5 @@
 // initial state
-const state = () => ({
+const state = {
     toast: {
         message: null,
         type: null,
@@ -11,7 +11,7 @@ const state = () => ({
     selectedArcaneRiverArea: process.client ? window.localStorage.getItem('selectedArcaneRiverArea') : 'vanishing_road',
     users: [],
     userWhisperedToMe: null
-})
+}
 
 // getters
 const getters = {
