@@ -38,7 +38,7 @@
                         </div>
                         <ChatUsers class="flex-wrap" v-show="chat === 'show'" @onClickUser="focusChatInputBox"/>
                     </div>
-                    <div class="flex-row chat-status">
+                    <div class="flex-row items-center chat-status">
                         <div class="btn flex-wrap chat-type text-ellipsis" @click="showConfirmChatType = true">{{ displayedChatType }}</div>
                         <input
                             class="flex-fill"
