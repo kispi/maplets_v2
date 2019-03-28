@@ -1,8 +1,7 @@
 <template>
     <div class="chat">
-        <!-- <button class="btn btn-default btn-sm shadow m-b-8 m-r-8" style="margin-left: auto;" @click="init" v-if="!connected">{{ 'RECONNECT' | translate }}</button> -->
-        <ConfirmChatUser v-if="showConfirmChatUser" @close="showConfirmChatUser = false" />
-        <ConfirmChatType v-if="showConfirmChatType" @close="showConfirmChatType = false" @onConfirm="onConfirmChatType"/>
+        <ConfirmChatUser v-show="showConfirmChatUser" @close="showConfirmChatUser = false" />
+        <ConfirmChatType v-show="showConfirmChatType" @close="showConfirmChatType = false" @onConfirm="onConfirmChatType"/>
 
         <div class="flex-row o-hidden">
             <div class="btn-container p-relative chat-buttons flex-wrap">
@@ -120,21 +119,9 @@ export default {
         this.dataStream.close();
     },
     mounted() {
-        this.init();
+        this.connect();
     },
     methods: {
-        init() {
-            if (!this.user.selectedChatType) {
-                this.user.selectedChatType = "NORMAL";
-            }
-            if (!this.user.nickname) {
-                this.showConfirmChatUser = true;
-            }
-            if (!this.nickname) {
-                this.disableChat = true
-            }
-            this.connect();
-        },
         connect() {
             if (this.connected) {
                 return
