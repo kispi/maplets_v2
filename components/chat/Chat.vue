@@ -198,7 +198,9 @@ export default {
                         if (msg.status === "SUCCESS") {
                             this.$nuxt.$emit("onSuccessSetUser", msg.user);
                             this.disableChat = false
-                            this.user.selectedChatType = "NORMAL";
+                            if (!this.user.selectedChatType) {
+                                this.user.selectedChatType = "NORMAL";
+                            }
                             this.broadcastChange();
                             this.focusChatInputBox();
                         } else if (msg.status === "NICKNAME_ARLEADY_EXIST") {

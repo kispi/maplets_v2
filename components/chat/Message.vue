@@ -2,18 +2,14 @@
     <div class="message" :class="messageClass">
         {{ message.timestamp | formatDate("HH:mm:ss") }}
         <span v-if="!isWhisper">
-            <span>{{ (message.user || {}).nickname }}</span>
-            <WorldIcon :world="(message.user || {}).world"/>
+            <span>{{ (message.user || {}).nickname }}</span><WorldIcon :world="(message.user || {}).world"/>
         </span>
         <span v-else>
-            <span>{{ partner.nickname }}</span>
-            <span v-if="isMyMessage">{{ left }}</span>
+            <span>{{ partner.nickname }}</span><span v-if="isMyMessage">{{ left }}</span>
             <span v-else>
-                <span v-if="partner.world !== me.world">[{{ partner.world | translate }}]</span>
-                <span>{{ right }}</span>
+                <span v-if="partner.world !== me.world">[{{ partner.world | translate }}]</span><span>{{ right }}</span>
             </span>
-        </span>
-        <span :class="{'m-l-8': messageClass !== 'ms-error'}">{{ (message.content || {}).text }}</span>
+        </span><span :class="{'m-l-8': messageClass !== 'ms-error'}">{{ (message.content || {}).text }}</span>
     </div>
 </template>
 
