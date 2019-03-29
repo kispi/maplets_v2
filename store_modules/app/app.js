@@ -1,7 +1,7 @@
 // initial state
 const state = {
     background: process.client ? window.localStorage.getItem('background') : 'show',
-    chat: process.client ? window.localStorage.getItem('chat') : 'show',
+    chat: process.client ? window.localStorage.getItem('chat') : 'hide',
     selectedArcaneRiverArea: process.client ? window.localStorage.getItem('selectedArcaneRiverArea') : 'vanishing_road',
     users: [],
     userWhisperedToMe: null

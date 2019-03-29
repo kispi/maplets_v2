@@ -121,8 +121,8 @@ export default {
     },
     mounted() {
         this.connect();
-        if (mobileDetect()) {
-            this.chat = "hide"
+        if (!mobileDetect()) {
+            this.chat = "show"
         }
     },
     methods: {
