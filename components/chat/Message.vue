@@ -9,7 +9,7 @@
             <span v-else>
                 <span v-if="partner.world !== me.world">[{{ partner.world | translate }}]</span><span>{{ right }}</span>
             </span>
-        </span><span :class="{'m-l-8': messageClass !== 'ms-error'}">{{ (message.content || {}).text }}</span>
+        </span><span :class="shouldPadLeft">{{ (message.content || {}).text }}</span>
     </div>
 </template>
 
@@ -53,6 +53,9 @@ export default {
                 return 'ms-' + (this.message.content || {}).type.toLowerCase()
             }
             return ""
+        },
+        shouldPadLeft() {
+            return ["ERROR", "NOTICE"].indexOf(this.message.content.type) === -1 ? 'm-l-8' : undefined
         }
     }
 }

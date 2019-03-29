@@ -6,8 +6,6 @@ export default {
 
         if (payload !== undefined) {
             state.translation.locale = payload
-            if (process.client)
-                window.localStorage.setItem("locale", payload)
         }
     },
 };

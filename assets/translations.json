@@ -376,8 +376,8 @@
         "kr": "정보"
     },
     "CHAT_HELP": {
-        "en": "- Select the world and nickname.<br>- We don't ensure the chatter is the real owner of the nickname since there is no authentication yet.<br>- Messages are shown up to number 200.<br>- Messages are not saved so if you restart the ap they're gone.",
-        "kr": "- 월드와 닉네임을 선택하세요.<br>- 아직은 인증을 위한 수단이 없어, 실제 인물임을 보장할 수 없습니다. 사칭에 유의하세요.<br>- 대화내역은 최대 200개까지 노출됩니다.<br>- 대화내역은 저장되지 않으며, 앱을 재시작하면 사라집니다."
+        "en": "You can set the world and nickname.\nWe don't ensure the person is the real owner of the nickname.\nMessages are shown up to number 200.\nMessages are not saved so if you restart the ap they're gone.",
+        "kr": "월드와 닉네임을 설정할 수 있습니다.\n실제 인물임을 보장하지 않습니다. 사칭에 유의하세요.\n대화내역은 최대 200개까지 노출됩니다.\n대화내역은 저장되지 않으며, 앱을 재시작하면 사라집니다."
     },
     "SET_NICKNAME": {
         "en": "Setnick",

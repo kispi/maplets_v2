@@ -1,8 +1,8 @@
 // initial state
 const state = {
-    background: process.client ? window.localStorage.getItem('background') : 'show',
-    chat: process.client ? window.localStorage.getItem('chat') : 'hide',
-    selectedArcaneRiverArea: process.client ? window.localStorage.getItem('selectedArcaneRiverArea') : 'vanishing_road',
+    background: 'show',
+    chat: 'hide',
+    selectedArcaneRiverArea: 'vanishing_road',
     users: [],
     userWhisperedToMe: null
 }
@@ -36,16 +36,12 @@ const mutations = {
             return
         }
         state.chat = payload
-        if (process.client)
-            window.localStorage.setItem('chat', state.chat)
     },
     background(state, payload) {
         if (["show", "hide"].indexOf(payload) === -1) {
             return
         }
         state.background = payload
-        if (process.client)
-            window.localStorage.setItem('background', state.background)
     },
     updateUsersList(state, payload) {
         if (!payload) {
@@ -64,7 +60,6 @@ const mutations = {
             return
         }
         state.selectedArcaneRiverArea = payload.value
-        window.localStorage.setItem('selectedArcaneRiverArea', state.selectedArcaneRiverArea)
     },
 }
 

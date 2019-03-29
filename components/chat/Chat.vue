@@ -1,5 +1,14 @@
 <template>
     <div class="chat">
+
+        <div v-if="connected === false" class="overlay bgm-gray o-50"></div>
+        <div v-if="connected === false" class="overlay flex-row items-center">
+            <button
+                class="btn btn-default b-md m-a"
+                @click="connect"
+                style="max-width: 120px;">{{ 'RECONNECT' | translate }}</button>
+        </div>
+
         <ConfirmChatUser v-show="showConfirmChatUser" @close="showConfirmChatUser = false" />
         <ConfirmChatType v-show="showConfirmChatType" @close="showConfirmChatType = false" @onConfirm="onConfirmChatType"/>
 
@@ -53,7 +62,6 @@
                 </div>
             </transition>
         </div>
-        <!-- <div class="c-primary m-t-16 f-12" v-html="$options.filters.translate('CHAT_HELP')"></div> -->
     </div>
 </template>
 <script>
@@ -80,7 +88,7 @@ export default {
         messages: [],
         text: null,
         disableChat: false,
-        connected: false,
+        connected: undefined,
     }),
     computed: {
         user: {
@@ -124,6 +132,9 @@ export default {
         if (!mobileDetect()) {
             this.chat = "show"
         }
+        this.$options.filters.translate("CHAT_HELP").split("\n").forEach(msg => {
+            this.pushNoticeMessage(msg)
+        })
     },
     methods: {
         connect() {
@@ -143,18 +154,14 @@ export default {
             this.dataStream.onopen = event => {
                 this.login()
                 this.scrollToBottom();
-                console.log(event);
                 this.$toast.success("CONNECTED");
-                this.connected = true;
             }
 
             this.dataStream.onerror = event => {
-                console.error(event);
                 this.connected = false;
             }
 
             this.dataStream.onclose = event => {
-                console.error(event);
                 this.$toast.error("DISCONNECTED");
                 this.connected = false;
             }
@@ -162,6 +169,28 @@ export default {
             this.dataStream.onmessage = event => {
                 this.handleMessage(event)
             }
+        },
+        // This tries to reconnect automatically, but I'll use just reconnect button instead for now.
+        reconnect() {
+            if (this.interv) {
+                return
+            }
+
+            this.interv = setInterval(_ => {
+                if (this.connected) {
+                    clearInterval(this.interv)
+                    return
+                }
+                this.connect()
+            }, 1000)
+        },
+        pushNoticeMessage(msg) {
+            this.pushMessageToArray({
+                content: {
+                    text: msg,
+                    type: "NOTICE"
+                }
+            })
         },
         pushErrorMessage(errMsg) {
             this.pushMessageToArray({
@@ -198,18 +227,15 @@ export default {
                         if (msg.status === "SUCCESS") {
                             this.$nuxt.$emit("onSuccessSetUser", msg.user);
                             this.disableChat = false
+                            this.connected = true
                             if (!this.user.selectedChatType) {
                                 this.user.selectedChatType = "NORMAL";
                             }
-                            this.broadcastChange();
-                            this.focusChatInputBox();
-                        } else if (msg.status === "NICKNAME_ARLEADY_EXIST") {
-                            this.$nuxt.$emit("onErrorSetUser", msg.status);
-                        } else if (msg.status === "INVALID_AUTH_TOKEN") {
-                            this.showConfirmChatUser = true;
-                            setTimeout(_ => {
-                                this.$nuxt.$emit("onErrorSetUser", msg.status);
-                            }, 0)
+                            this.broadcastChange()
+                            this.focusChatInputBox()
+                        } else {
+                            this.$store.dispatch("removeUser")
+                            this.connect()
                         }
                         break;
                     case "GET_USERS":
@@ -313,7 +339,6 @@ export default {
         },
         clearMessages() {
             this.messages = [];
-            window.localStorage.removeItem('chats');
         },
         onFocus() {
             this.$refs['chatInputBox'].classList.add('focused')
@@ -375,7 +400,7 @@ export default {
 }
 
 .chat {
-    font-family: Gulim;
+    font-family: Arial;
     font-size: 14px;
 }
 </style>

@@ -72,12 +72,6 @@ export default {
             this.$store.dispatch('setUser', user);
             this.$emit('close');
         })
-        this.$nuxt.$on('onErrorSetUser', e => {
-            this.$toast.error(e)
-            if (e === "INVALID_AUTH_TOKEN") {
-                this.$store.commit('removeUser')
-            }
-        })
     },
     beforeDestroy() {
         this.$nuxt.$off('onSetUser')

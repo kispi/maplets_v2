@@ -1,12 +1,3 @@
-let storedUser
-if (process.client) {
-    storedUser = window.localStorage.getItem('user')
-}
-
-if (storedUser) {
-    storedUser = JSON.parse(storedUser)
-}
-
 const newUser = _ => {
     return {
         authToken: null,
@@ -18,7 +9,7 @@ const newUser = _ => {
 }
 
 const state = {
-    user: storedUser || newUser()
+    user: newUser()
 }
 
 const getters = {
@@ -34,22 +25,25 @@ const actions = {
     }, payload) {
         return commit('setUser', payload)
     },
+    async removeUser({
+        commit
+    }) {
+        return commit('setUser')
+    }
 }
 
 const mutations = {
     setUser(state, payload) {
         if (payload === undefined) {
+            state.user = newUser();
             return
         }
+
         Object.keys(state.user).forEach(key => {
-                if (payload[key])
-                    state.user[key] = payload[key]
-            })
-            // window.localStorage.setItem('user', JSON.stringify(state.user))
-    },
-    removeUser(state) {
-        state.user = newUser();
-        window.localStorage.removeItem("user")
+            if (payload[key]) {
+                state.user[key] = payload[key]
+            }
+        })
     },
 }
 
