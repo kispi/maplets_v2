@@ -50,7 +50,7 @@ const mutations = {
     removeUser(state) {
         state.user = newUser();
         window.localStorage.removeItem("user")
-    }
+    },
 }
 
 export default {

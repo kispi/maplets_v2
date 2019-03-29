@@ -10,7 +10,7 @@
 
         <div class="flex-row items-center">
             <div class="form-group m-a m-b-16">
-                <label class="lines-1 text-center text-uppercase m-b-16">{{ 'SET_LEVEL_HERE' | translate }}</label>
+                <label class="lines-1 text-center text-uppercase m-b-16" :class="labelClass">{{ 'SET_LEVEL_HERE' | translate }}</label>
                 <div class="level-box">
                     <div class="flex-row flex-between">
                         <div
@@ -86,6 +86,9 @@ export default {
             set(area) {
                 this.$store.commit('setArcaneRiverArea', area)
             }
+        },
+        labelClass() {
+            return this.$store.getters.background === "show" ? "c-white" : "c-text-dark"
         }
     },
     watch: {

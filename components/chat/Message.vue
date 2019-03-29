@@ -62,5 +62,6 @@ export default {
     width: 100%;
     padding: 2px;
     display: inline-block;
+    word-break: break-all;
 }
 </style>
