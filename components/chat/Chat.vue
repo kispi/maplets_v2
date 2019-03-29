@@ -62,6 +62,7 @@ import ConfirmChatUser from '@/components/modals/ConfirmChatUser'
 import ChatUsers from '@/components/chat/ChatUsers'
 import Message from '@/components/chat/Message'
 import Selector from '@/components/app/Selector'
+import mobileDetect from '@/modules/mobile-detect'
 import * as $http from 'axios'
 
 export default {
@@ -120,6 +121,9 @@ export default {
     },
     mounted() {
         this.connect();
+        if (mobileDetect()) {
+            this.chat = "hide"
+        }
     },
     methods: {
         connect() {

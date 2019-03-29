@@ -39,9 +39,6 @@ export default {
             this.$router.push("/")
         }
     },
-    mounted() {
-        this.$loading(true)
-    },
     computed: {
         background() {
             if (this.$store.getters.background === "hide") return;

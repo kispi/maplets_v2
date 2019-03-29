@@ -1,5 +1,5 @@
 <template>
-    <div class="loading" v-if="show && shouldShowLoading">
+    <div class="loading" v-show="show && shouldShowLoading">
         <Preloader/>
     </div>
 </template>
@@ -15,7 +15,7 @@ export default {
         show: false,
     }),
     watch: {
-        loading() {
+        show() {
             this.shouldShowLoading = false;
             if (this.show) {
                 setTimeout(() => {

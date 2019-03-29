@@ -1,11 +1,5 @@
 // initial state
 const state = {
-    toast: {
-        message: null,
-        type: null,
-        show: false,
-    },
-    loading: false,
     background: process.client ? window.localStorage.getItem('background') : 'show',
     chat: process.client ? window.localStorage.getItem('chat') : 'show',
     selectedArcaneRiverArea: process.client ? window.localStorage.getItem('selectedArcaneRiverArea') : 'vanishing_road',
@@ -15,12 +9,6 @@ const state = {
 
 // getters
 const getters = {
-    toast(state) {
-        return state.toast
-    },
-    loading(state) {
-        return state.loading
-    },
     selectedArcaneRiverArea(state) {
         return state.selectedArcaneRiverArea
     },
@@ -39,26 +27,7 @@ const getters = {
 }
 
 // actions
-const actions = {
-    async setToast({
-        commit,
-    }, payload) {
-        payload.show = true;
-        return commit('setToast', payload)
-    },
-    async removeToast({
-        commit,
-    }) {
-        return commit('setToast', {
-            show: false
-        })
-    },
-    async setLoading({
-        commit,
-    }, payload) {
-        return commit('setLoading', payload)
-    }
-}
+const actions = {}
 
 // mutations
 const mutations = {
@@ -90,30 +59,6 @@ const mutations = {
         }
         state.userWhisperedToMe = payload
     },
-    setToast(state, payload) {
-        if (!payload) {
-            state = {
-                toast: {
-                    message: null,
-                    type: null,
-                    show: false,
-                },
-            }
-            return
-        }
-
-        if (payload.type !== undefined) {
-            state.toast.type = payload.type
-        }
-
-        if (payload.message !== undefined) {
-            state.toast.message = payload.message
-        }
-
-        if (payload.show !== undefined) {
-            state.toast.show = payload.show
-        }
-    },
     setArcaneRiverArea(state, payload) {
         if (payload === undefined) {
             return
@@ -121,11 +66,6 @@ const mutations = {
         state.selectedArcaneRiverArea = payload.value
         window.localStorage.setItem('selectedArcaneRiverArea', state.selectedArcaneRiverArea)
     },
-    setLoading(state, payload) {
-        if (payload !== undefined) {
-            state.loading = payload;
-        }
-    }
 }
 
 export default {

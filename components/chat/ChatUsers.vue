@@ -6,7 +6,7 @@
             v-show="user.nickname"
             @click="onClickUser(user.nickname)">
             <WorldIcon class="m-r-8" :world="user.world"/>
-            <div class="c-white lines-1">{{ user.nickname }}</div>
+            <div class="c-white lines-1" :class="nameColorClass(user)">{{ user.nickname }}</div>
         </div>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
     computed: {
         users() {
             return this.$store.getters.users
-        }
+        },
     },
     methods: {
         onClickUser(nickname) {
@@ -32,6 +32,9 @@ export default {
                 })
             }
             this.$emit('onClickUser')
+        },
+        nameColorClass(user) {
+            return this.$store.getters.user.nickname === user.nickname ? 'f-700 text-underline' : undefined
         }
     }
 }

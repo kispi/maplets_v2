@@ -41,7 +41,7 @@ export default {
 
             var toastTimeout = setTimeout(() => {
                 this.resetToast()
-            }, 1000)
+            }, 1500)
         })
     },
 };
