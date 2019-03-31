@@ -44,9 +44,9 @@ export default {
                 icon: "zmdi-star-circle",
                 route: "arcane"
             }, {
-                title: "ABILITY",
-                icon: "zmdi-lock-outline",
-                route: "ability"
+                title: "MAPLE_TIPS",
+                icon: "zmdi-info-outline",
+                route: "tips"
             }, {
                 title: "BOARD",
                 icon: "zmdi-format-list-bulleted",

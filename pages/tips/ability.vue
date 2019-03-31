@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Ability from '@/components/routes/Ability'
+import Ability from '@/components/routes/tips/Ability'
 
 export default {
     layout: 'default',

@@ -6,7 +6,7 @@
             <div
                 class="toast shadow"
                 :class="toast.class">
-                <div v-html="html" />
+                <div v-html="html"/>
             </div>
         </div>
     </transition>

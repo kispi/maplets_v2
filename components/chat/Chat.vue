@@ -1,28 +1,30 @@
 <template>
     <div class="chat">
 
-        <div v-if="connected === false" class="overlay bgm-gray o-50"></div>
-        <div v-if="connected === false" class="overlay flex-row items-center">
-            <button
-                class="btn btn-default b-md m-a"
-                @click="connect"
-                style="max-width: 120px;">{{ 'RECONNECT' | translate }}</button>
+        <div v-if="connected === false && chat === 'show'">
+            <div class="overlay bgm-gray o-50"></div>
+            <div class="overlay flex-row items-center">
+                <button
+                    class="btn btn-default b-md m-a"
+                    @click="connect"
+                    style="max-width: 120px;">{{ 'RECONNECT' | translate }}</button>
+            </div>
         </div>
 
-        <ConfirmChatUser v-show="showConfirmChatUser" @close="showConfirmChatUser = false" />
+        <ConfirmChatUser v-show="showConfirmChatUser" @close="showConfirmChatUser = false"/>
         <ConfirmChatType v-show="showConfirmChatType" @close="showConfirmChatType = false" @onConfirm="onConfirmChatType"/>
 
         <div class="flex-row o-hidden">
             <div class="btn-container p-relative chat-buttons flex-wrap">
                 <transition-group name="fade">
-                    <div class="overlay" v-show="chat === 'show'" :key="-1"></div>
+                    <div class="overlay" v-show="chat === 'show'" :key="0"></div>
                     <button
-                        :key="0"
+                        :key="1"
                         v-show="chat === 'show'"
                         class="btn font-hover-shadow flex-fill"
                         @click="showConfirmChatUser = true"><i class="zmdi zmdi-account"></i></button>
                     <button
-                    :key="1"
+                        :key="2"
                         v-show="chat === 'show'"
                         class="btn font-hover-shadow flex-fill m-t-8"
                         @click="clearMessages"><i class="zmdi zmdi-delete"></i></button>

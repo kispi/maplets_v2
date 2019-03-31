@@ -1,0 +1,130 @@
+{
+    "UNION_LEVELS": {
+        "en": "Union Level & Grade",
+        "kr": "유니온 레벨 & 등급"
+    },
+    "CLASS": {
+        "en": "Class",
+        "kr": "직업"
+    },
+    "EFFECT": {
+        "en": "Effect",
+        "kr": "효과"
+    },
+    "CLASS_NORMAL": {
+        "en": "Normal Class",
+        "kr": "일반 직업"
+    },
+    "CLASS_ZERO": {
+        "en": "Zero",
+        "kr": "제로"
+    },
+    "CLASS_MAPLE_M": {
+        "en": "Maple M",
+        "kr": "메이플 M"
+    },
+    "UNION_COMMON": {
+        "en": "Union Common",
+        "kr": "공통"
+    },
+    "UNION_CRITICAL_RATE": {
+        "en": "Increased Critical Rate",
+        "kr": "크리티컬 확률 증가"
+    },
+    "UNION_COOLTIME_REDUCTION": {
+        "en": "Cooltime Reduction",
+        "kr": "스킬 재사용 대기시간 감소"
+    },
+    "UNION_BOSS_DAMAGE": {
+        "en": "Increased Damage to Boss Monster",
+        "kr": "보스 몬스터 공격 시 데미지 증가"
+    },
+    "UNION_IGNORE_GUARD": {
+        "en": "Ignore Guard",
+        "kr": "방어율 무시 증가"
+    },
+    "UNION_INCREASED_DAMAGE_CHANCE_20": {
+        "en": "20% Chance to Increase Damage",
+        "kr": "공격 시 20% 확률로 데미지 증가"
+    },
+    "UNION_STATS": {
+        "en": "Stats",
+        "kr": "스탯"
+    },
+    "UNION_STR": {
+        "en": "Increased STR",
+        "kr": "STR 증가"
+    },
+    "UNION_DEX": {
+        "en": "Increased DEX",
+        "kr": "DEX 증가"
+    },
+    "UNION_INT": {
+        "en": "Increased INT",
+        "kr": "INT 증가"
+    },
+    "UNION_LUK": {
+        "en": "Increased LUK",
+        "kr": "LUK 증가"
+    },
+    "UNION_STR_DEX_LUK": {
+        "en": "Increased STR, DEX, LUK",
+        "kr": "STR, DEX, LUK 증가"
+    },
+    "UNION_BUFF_LENGTH": {
+        "en": "Increased Buff Duration",
+        "kr": "버프 지속시간 증가"
+    },
+    "UNION_CRITICAL_DAMAGE": {
+        "en": "Increased Critical Damage",
+        "kr": "크리티컬 데미지 증가"
+    },
+    "UNION_AD_AP": {
+        "en": "Increased AD/AP",
+        "kr": "공격력/마력 증가"
+    },
+    "UNION_ETC": {
+        "en": "Etc",
+        "kr": "기타"
+    },
+    "UNION_EXP": {
+        "en": "Increased EXP",
+        "kr": "경험치 획득량 증가"
+    },
+    "UNION_MESO": {
+        "en": "Increased MESO",
+        "kr": "메소 획득량 증가"
+    },
+    "UNION_HP": {
+        "en": "Increased HP",
+        "kr": "HP 증가"
+    },
+    "UNION_SUMMON_LENGTH": {
+        "en": "Increased Summons Duration",
+        "kr": "소환수 지속시간 증가"
+    },
+    "UNION_HP_RECOVERY": {
+        "en": "70% Chance To Recover Raw HP Per Attack",
+        "kr": "적 공격마다 70%의 확률로 순수 HP 회복"
+    },
+    "UNION_MP_RECOVERY": {
+        "en": "70% Chance To Recover Raw MP Per Attack",
+        "kr": "적 공격마다 70%의 확률로 순수 MP 회복"
+    },
+    "UNION_MAX_HP": {
+        "en": "Increased Max HP",
+        "kr": "최대 HP 증가"
+    },
+    "UNION_MAX_MP": {
+        "en": "Increased Max MP",
+        "kr": "최대 MP 증가"
+    },
+    "UNION_RESISTANCE": {
+        "en": "Increased Resistance to Abnormal State",
+        "kr": "상태 이상 내상 증가"
+    },
+    "MAPLE_M": {
+        "en": "Maple M",
+        "kr": "메이플 M"
+    }
+}

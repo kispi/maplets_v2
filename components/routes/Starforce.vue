@@ -118,6 +118,12 @@ export default {
         lastHoveredPos: null,
         shouldTwoCols: false
     }),
+    head: () => ({
+        title: '스타포스 역계산기 :: MAPLETs',
+        meta: [
+            { name: 'description', content: '스타포스 계산기, 역계산기입니다. 스타포스 0성 상태에서의 주흔작 수치를 알 수 있습니다.' }
+        ]
+    }),
     computed: {
         reqLevs() {
             return this.supportedLevs.map(l => l.title)

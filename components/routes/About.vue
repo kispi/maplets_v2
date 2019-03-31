@@ -34,6 +34,12 @@
 <script>
 export default {
     name: 'About',
+    head: () => ({
+        title: '정보 :: MAPLETs',
+        meta: [
+            { name: 'description', content: 'MAPLETs 소개 및 업데이트 내역을 제공합니다.' }
+        ]
+    }),
     computed: {
         updates() {
             return [

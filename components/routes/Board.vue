@@ -38,6 +38,17 @@ import ArticleHeader from '@/components/routes/board/ArticleHeader'
 
 export default {
     name: 'Board',
+    components: { Article, ArticleHeader },//, Pagination },
+    data: () => ({
+        selected: 0,
+        limit: -1,
+    }),
+    head: () => ({
+        title: '자유게시판 :: MAPLETs',
+        meta: [
+            { name: 'description', content: '익명 사용 가능한 자유게시판입니다. 계정생성 & 로그인 기능은 추후 제공 될 수 있습니다.' }
+        ]
+    }),
     computed: {
         articles() {
             return this.$store.getters.articles
@@ -54,11 +65,6 @@ export default {
             this.reload()
         }
     },
-    data: () => ({
-        selected: 0,
-        limit: -1,
-    }),
-    components: { Article, ArticleHeader },//, Pagination },
     created() {
         this.$nuxt.$on('onRepliesMutated', this.reload)
     },

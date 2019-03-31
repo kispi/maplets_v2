@@ -2,20 +2,22 @@
     <div class="ability route">
         <div class="m-16 text-xl c-white text-center" v-show="showOrientInstruction">{{ 'ABILITY_TXT' | translate }}</div>
         <table class="items">
-            <tr>
-                <td class="item">{{ 'ABILITY' | translate }}</td>
-                <td class="item">{{ 'RARE' | translate }}</td>
-                <td class="item">{{ 'EPIC' | translate }}</td>
-                <td class="item">{{ 'UNIQUE' | translate }}</td>
-                <td class="item">{{ 'LEGENDARY' | translate }}</td>
-            </tr>
-            <tr :key="abilityKey" v-for="abilityKey in keys">
-                <td class="item">{{ abilityKey.toUpperCase() | translate }}</td>
-                <td
-                    class="item"
-                    :key="idx"
-                    v-for="(value, idx) in items[abilityKey]">{{ value }}</td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td class="item">{{ 'ABILITY' | translate }}</td>
+                    <td class="item">{{ 'RARE' | translate }}</td>
+                    <td class="item">{{ 'EPIC' | translate }}</td>
+                    <td class="item">{{ 'UNIQUE' | translate }}</td>
+                    <td class="item">{{ 'LEGENDARY' | translate }}</td>
+                </tr>
+                <tr :key="abilityKey" v-for="abilityKey in keys">
+                    <td class="item">{{ abilityKey.toUpperCase() | translate }}</td>
+                    <td
+                        class="item"
+                        :key="idx"
+                        v-for="(value, idx) in items[abilityKey]">{{ value }}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </template>
@@ -25,6 +27,12 @@ export default {
     name: 'Ability',
     data: () => ({
         showOrientInstruction: null,
+    }),
+    head: () => ({
+        title: '어빌리티 정리 :: MAPLETs',
+        meta: [
+            { name: 'description', content: '레어, 에픽, 유니크, 레전드리의 모든 출현 가능한 어빌리티입니다.' }
+        ]
     }),
     created() {
         if (process.client)

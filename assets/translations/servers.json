@@ -1,0 +1,66 @@
+{
+    "NONE": {
+        "en": "None",
+        "kr": "선택안함"
+    },
+    "ALL": {
+        "en": "ALL",
+        "kr": "전체"
+    },
+    "SCANIA": {
+        "en": "Scania",
+        "kr": "스카니아"
+    },
+    "BERA": {
+        "en": "Bera",
+        "kr": "베라"
+    },
+    "ZENITH": {
+        "en": "Zenith",
+        "kr": "제니스"
+    },
+    "CROA": {
+        "en": "Croa",
+        "kr": "크로아"
+    },
+    "RED": {
+        "en": "Red",
+        "kr": "레드"
+    },
+    "AURORA": {
+        "en": "Aurora",
+        "kr": "오로라"
+    },
+    "ARCANE": {
+        "en": "Arcane",
+        "kr": "아케인"
+    },
+    "NOVA": {
+        "en": "Nova",
+        "kr": "노바"
+    },
+    "ENOSIS": {
+        "en": "Enosis",
+        "kr": "이노시스"
+    },
+    "UNION": {
+        "en": "Union",
+        "kr": "유니온"
+    },
+    "ELYSIUM": {
+        "en": "Elysium",
+        "kr": "엘리시움"
+    },
+    "LUNA": {
+        "en": "Luna",
+        "kr": "루나"
+    },
+    "REBOOT_1": {
+        "en": "Reboot 1",
+        "kr": "리부트 1"
+    },
+    "REBOOT_2": {
+        "en": "Reboot 2",
+        "kr": "리부트 2"
+    }
+}

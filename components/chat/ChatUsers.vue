@@ -17,7 +17,7 @@ export default {
     components: {
         WorldIcon
     },
-    name: "ChatUsers",
+    name: 'ChatUsers',
     computed: {
         users() {
             return this.$store.getters.users

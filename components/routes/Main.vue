@@ -21,7 +21,7 @@ export default {
         buttons() {
             return [{ route: "starforce", name: "STARFORCE", class: "bgm-yellow c-black" },
                 { route: "arcane", name: "ARCANE", class: "bgm-teal" },
-                { route: "ability", name: "ABILITY", class: "bgm-legendary" },
+                { route: "tips", name: "MAPLE_TIPS", class: "bgm-legendary" },
                 { route: "board", name: "BOARD", class: "bgm-epic" },
                 { route: "settings", name: "SETTINGS", class: "bgm-rare" },
                 { route: "about", name: "ABOUT", class: "bgm-unique" }]

@@ -2,7 +2,7 @@
 const state = {
     background: 'show',
     chat: 'hide',
-    selectedArcaneRiverArea: 'vanishing_road',
+    selectedArcaneRiverArea: 'vanishingRoad',
     users: [],
     userWhisperedToMe: null
 }

@@ -22,30 +22,26 @@
                         maxlength="30"
                         class="form-control m-r-8"
                         :placeholder="'NICKNAME' | translate"
-                        v-model="article.nickname"
-                        />
+                        v-model="article.nickname"/>
                     <input
                         type="password"
                         name="password"
                         maxlength="12"
                         class="form-control"
                         :placeholder="'PASSWORD' | translate"
-                        v-model="article.password"
-                        />
+                        v-model="article.password"/>
                 </div>
                 <input
                     name="title"
                     maxlength="100"
                     class="form-control m-b-8"
                     :placeholder="'WRITE_TITLE_PLACEHOLDER' | translate"
-                    v-model="article.title"
-                    />
+                    v-model="article.title"/>
                 <textarea
                     name="text"
                     maxlength="10000"
                     :placeholder="'WRITE_TEXT_PLACEHOLDER' | translate"
-                    v-model="article.text"
-                    />
+                    v-model="article.text"/>
             </form>
             <div class="flex-row m-t-8">
                 <button

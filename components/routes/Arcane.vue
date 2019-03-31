@@ -26,12 +26,11 @@
                         <div
                             class="text-center flex-fill"
                             :class="{'selected': lev === idx + 11}"
-                            v-for="(_, idx) in $numArray(9)"
-                            @click="idx !== 9 ? lev = idx + 11 : undefined"
+                            v-for="(_, idx) in $numArray(10)"
+                            @click="lev = idx + 11"
                             :key="idx">
                             {{ idx + 11 }}
                         </div>
-                        <div class="text-center flex-fill"></div>
                     </div>
                 </div>
             </div>
@@ -59,6 +58,12 @@ export default {
     data: () => ({
         lev: 1,
     }),
+    head: () => ({
+        title: '아케인 심볼 계산기 :: MAPLETs',
+        meta: [
+            { name: 'description', content: '아케인 심볼 계산기입니다' }
+        ]
+    }),
     components: { RadioButtons },
     computed: {
         neededLabel() {
@@ -77,7 +82,7 @@ export default {
             return this.$arcane.totalFee(this.lev)
         },
         arcaneRivers() {
-            return [{ title: "VANISHING_ROAD", value: 'vanishing_road' }, { title: "OTHER_AREAS", value: 'others' }]
+            return [{ title: "VANISHING_ROAD", value: 'vanishingRoad' }, { title: "OTHER_AREAS", value: 'others' }]
         },
         selected: {
             get() {
@@ -96,7 +101,7 @@ export default {
             val = parseInt(val)
             if (typeof val !== "number" || val < 1) {
                 this.lev = 1
-            } else if (val > 20) {
+            } else if (val >= 20) {
                 this.lev = 20
             }
         }

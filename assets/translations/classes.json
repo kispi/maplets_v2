@@ -1,0 +1,166 @@
+{
+    "SNIPER": {
+        "en": "Sniper",
+        "kr": "신궁"
+    },
+    "NIGHTLORD": {
+        "en": "Nightlord",
+        "kr": "나이트로드"
+    },
+    "MERCEDES": {
+        "en": "Mercedes",
+        "kr": "메르세데스"
+    },
+    "DEMONAVENGER": {
+        "en": "Demonavenger",
+        "kr": "데몬어벤져"
+    },
+    "DEMONSLAYER": {
+        "en": "Demonslayer",
+        "kr": "데몬슬레이어"
+    },
+    "BLASTER": {
+        "en": "Blaster",
+        "kr": "블래스터"
+    },
+    "WILDHUNTER": {
+        "en": "Wildhunter",
+        "kr": "와일드헌터"
+    },
+    "MECHANIC": {
+        "en": "Mechanic",
+        "kr": "메카닉"
+    },
+    "EUNWOL": {
+        "en": "Eunwol",
+        "kr": "은월"
+    },
+    "STRIKER": {
+        "en": "Striker",
+        "kr": "스트라이커"
+    },
+    "KAISER": {
+        "en": "Kaiser",
+        "kr": "카이저"
+    },
+    "VIPER": {
+        "en": "Viper",
+        "kr": "바이퍼"
+    },
+    "HERO": {
+        "en": "Hero",
+        "kr": "히어로"
+    },
+    "PALADIN": {
+        "en": "Paladin",
+        "kr": "팔라딘"
+    },
+    "CANNONSHOOTER": {
+        "en": "Cannonshooter",
+        "kr": "캐논슈터"
+    },
+    "ARK": {
+        "en": "Ark",
+        "kr": "아크"
+    },
+    "BOWMASTER": {
+        "en": "Bowmaster",
+        "kr": "보우마스터"
+    },
+    "WINDBREAKER": {
+        "en": "Windbreaker",
+        "kr": "윈드브레이커"
+    },
+    "ANGELICBUSTER": {
+        "en": "Angelicbuster",
+        "kr": "엔젤릭버스터"
+    },
+    "PATHFINDER": {
+        "en": "Pathfinder",
+        "kr": "패스파인더"
+    },
+    "ARCHMAGE_TC": {
+        "en": "Archmage(T,C)",
+        "kr": "아크메이지(썬,콜)"
+    },
+    "ARCHMAGE_FP": {
+        "en": "Archmage(F,P)",
+        "kr": "아크메이지(불,독)"
+    },
+    "VISHOP": {
+        "en": "Vishop",
+        "kr": "비숍"
+    },
+    "BATTLEMAGE": {
+        "en": "Battlemage",
+        "kr": "배틀메이지"
+    },
+    "LUMINUS": {
+        "en": "Luminus",
+        "kr": "루미너스"
+    },
+    "FLAMEWIZARD": {
+        "en": "Flamewizard",
+        "kr": "플레임위저드"
+    },
+    "KINESIS": {
+        "en": "Kinesis",
+        "kr": "키네시스"
+    },
+    "ILLIUM": {
+        "en": "Illium",
+        "kr": "일리움"
+    },
+    "NIGHTWALKER": {
+        "en": "Nightwalker",
+        "kr": "나이트워커"
+    },
+    "SHADOWER": {
+        "en": "Shadower",
+        "kr": "섀도어"
+    },
+    "DUALBLADE": {
+        "en": "Dualblade",
+        "kr": "듀얼블레이드"
+    },
+    "CADENA": {
+        "en": "Cadena",
+        "kr": "카데나"
+    },
+    "XENON": {
+        "en": "Xenon",
+        "kr": "제논"
+    },
+    "ZERO": {
+        "en": "Zero",
+        "kr": "제로"
+    },
+    "PHANTOM": {
+        "en": "Phantom",
+        "kr": "팬텀"
+    },
+    "SOULMASTER": {
+        "en": "Soulmaster",
+        "kr": "소울마스터"
+    },
+    "MIHILE": {
+        "en": "Mihile",
+        "kr": "미하일"
+    },
+    "CAPTAIN": {
+        "en": "Captain",
+        "kr": "캡틴"
+    },
+    "ARAN": {
+        "en": "Aran",
+        "kr": "아란"
+    },
+    "EVAN": {
+        "en": "Evan",
+        "kr": "에반"
+    },
+    "DARKKNIGHT": {
+        "en": "Darkknight",
+        "kr": "다크나이트"
+    }
+}
