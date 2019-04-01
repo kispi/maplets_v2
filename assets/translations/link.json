@@ -1,0 +1,182 @@
+{
+    "LINK_TITLE": {
+        "en": "What is Link Skill?",
+        "kr": "링크 스킬"
+    },
+    "LINK_TXT": {
+        "en": "- The system that you can apply other characters at most 12 special skills to a character<br>- Reaches level 1, 2 respectively when achieve 70, 120 character level.(In case of Zero, it levels up for every finish of each chapter)",
+        "kr": "- 다른 캐릭터들의 특수한 능력을 한 캐릭터에 최대 12개까지 적용할 수 있는 시스템<br>- 70레벨 달성 시 1레벨, 120레벨 달성 시 2레벨.(단, 제로는 챕터 완료시마다 레벨 증가)"
+    },
+    "LINK_DEALINGS": {
+        "en": "Dealings",
+        "kr": "딜링"
+    },
+    "LINK_ETC": {
+        "en": "Etc",
+        "kr": "기타"
+    },
+    "LINK_EXPS": {
+        "en": "Experience",
+        "kr": "경험치"
+    },
+    "LINK_ELVEN_BLESS": {
+        "en": "Elven Bless",
+        "kr": "엘프의 축복"
+    },
+    "LINK_RUNE_PERSISTENCE": {
+        "en": "Rune Persistence",
+        "kr": "룬 퍼시스턴스"
+    },
+    "LINK_COMBO_ADVANTAGE": {
+        "en": "Combo Advantage",
+        "kr": "콤보 어드밴티지"
+    },
+    "LINK_WILD_RAGE": {
+        "en": "Wild Rage",
+        "kr": "와일드 레이지"
+    },
+    "LINK_DEMONS_FURY": {
+        "en": "Demons Fury",
+        "kr": "데몬스 퓨리"
+    },
+    "LINK_PERMEATE": {
+        "en": "Permeate",
+        "kr": "퍼미에이트"
+    },
+    "LINK_DEADLY_INSTINCT": {
+        "en": "Deadly Instinct",
+        "kr": "데들리 인스팅트"
+    },
+    "LINK_JUDGEMENT": {
+        "en": "Judgement",
+        "kr": "판단"
+    },
+    "LINK_SOUL_CONTRACT": {
+        "en": "Soul Contract",
+        "kr": "소울 컨트랙트"
+    },
+    "LINK_RHINNE_BLESSING": {
+        "en": "Blessing of Rhinne",
+        "kr": "륀느의 축복"
+    },
+    "LINK_HYBRID_LOGIC": {
+        "en": "Hybrid Logic",
+        "kr": "하이브리드 로직"
+    },
+    "LINK_INTENSIVE_INSULT": {
+        "en": "Intensive Insult",
+        "kr": "인텐시브 인설트"
+    },
+    "LINK_FLOW_OF_BATTLE": {
+        "en": "Flow of Battle",
+        "kr": "전투의 흐름"
+    },
+    "LINK_ECSTASY": {
+        "en": "Ecstasy",
+        "kr": "무아"
+    },
+    "LINK_KNIGHTS_WATCH": {
+        "en": "Knights Watch",
+        "kr": "빛의 수호"
+    },
+    "LINK_SPIRIT_OF_FREEDOM": {
+        "en": "Spirit of Freedom",
+        "kr": "스피릿 오브 프리덤"
+    },
+    "LINK_CYGNUS_BLESS": {
+        "en": "Cygnus Bless",
+        "kr": "시그너스 블레스"
+    },
+    "LINK_IRON_WILL": {
+        "en": "Iron Will",
+        "kr": "아이언 윌"
+    },
+    "LINK_PIRATE_BLESS": {
+        "en": "Pirate Bless",
+        "kr": "파이렛 블레스"
+    },
+    "LINK_CLOSE_CALL": {
+        "en": "Close Call",
+        "kr": "구사일생"
+    },
+    "LINK_ELVEN_BLESS_TXT": {
+        "en": "Increase Exp Gain by 10%/15%",
+        "kr": "경험치 10%/15% 추가"
+    },
+    "LINK_RUNE_PERSISTENCE_TXT": {
+        "en": "Increase Duration of Rune Persistence 30%/50%",
+        "kr": "룬 해방 지속시간 30%/50% 증가"
+    },
+    "LINK_COMBO_ADVANTAGE_TXT": {
+        "en": "Increase Exp Gain by Combo Ball by 400%/650%",
+        "kr": "콤보킬 구슬 경험치 획득량 400%/650% 증가"
+    },
+    "LINK_WILD_RAGE_TXT": {
+        "en": "Increase Damage by 5%/10%",
+        "kr": "데미지 5%/10% 증가"
+    },
+    "LINK_DEMONS_FURY_TXT": {
+        "en": "Increase Boss Damage by 10%/15%",
+        "kr": "보스 몬스터 공격 시 데미지 10%/15% 증가"
+    },
+    "LINK_PERMEATE_TXT": {
+        "en": "Ignore Guard by 10%/15%",
+        "kr": "방어율 무시 10%/15% 증가"
+    },
+    "LINK_DEADLY_INSTINCT_TXT": {
+        "en": "Increase Critical Rate by 10%/15%",
+        "kr": "크리티컬 확률 10%/15% 증가"
+    },
+    "LINK_JUDGEMENT_TXT": {
+        "en": "Increase Critical Damage by 2%/4%",
+        "kr": "크리티컬 데미지 2%/4% 증가"
+    },
+    "LINK_SOUL_CONTRACT_TXT": {
+        "en": "Increase Skill Damage in 10 Seconds by 30%/45%",
+        "kr": "10초간 스킬 데미지 30%/45% 증가"
+    },
+    "LINK_RHINNE_BLESSING_TXT": {
+        "en": "Decrease Damage from Monster by 3%/6%/9%/15%, Ignore Guard by 2%/4%/6%/10%",
+        "kr": "피격 데미지 3%/6%/9%/15% 감소, 방어율 무시 2%/4%/6%/10% 증가"
+    },
+    "LINK_HYBRID_LOGIC_TXT": {
+        "en": "Increase All Stats by 5%/10%",
+        "kr": "올스텟 5%/10% 증가"
+    },
+    "LINK_INTENSIVE_INSULT_TXT": {
+        "en": "Increase Damage to Lower Level or Abnormal State Monsters by 3%/6%",
+        "kr": "자신보다 낮은 레벨이거나 상태이상에 걸린 몬스터 공격시 데미지 3%/6% 증가"
+    },
+    "LINK_FLOW_OF_BATTLE_TXT": {
+        "en": "Increase Damage When Move Certain Amount by 1%/2%, Stacked 6 Times at Maximum",
+        "kr": "일정거리 이동시 데미지 1%/2% 증가, 최대 6회 중첩"
+    },
+    "LINK_ECSTASY_TXT": {
+        "en": "Increase Damage by 1%/2% Every 5 Second of Battle, Stacked 5 Times at Maximum",
+        "kr": "전투 상태가 5초 지속되면 발동되며 최대 5회 중첩 가능, 각 중첩당 데미지 1%/2% 증가"
+    },
+    "LINK_KNIGHTS_WATCH_TXT": {
+        "en": "Increase Stance by 100% 90/110 Seconds",
+        "kr": "90/110초간 스탠스 100% 증가"
+    },
+    "LINK_SPIRIT_OF_FREEDOM_TXT": {
+        "en": "Invulnerable For 1/2/3/4/5/6/7/8 Seconds After Resurrection",
+        "kr": "부활시 1/2/3/4/5/6/7/8초 동안 피해를 받지 않음"
+    },
+    "LINK_CYGNUS_BLESS_TXT": {
+        "en": "Increase Resistance to Abnormal State by 2/5/7/10/12/15/17/20/22/25, Increase Resistance to Elements by 2%/5%/7%/10%/12%/15%/17%/20%/22%/25%",
+        "kr": "상태이상 내성 2/5/7/10/12/15/17/20/22/25, 모든 속성 저항 2%/5%/7%/10%/12%/15%/17%/20%/22%/25% 증가"
+    },
+    "LINK_IRON_WILL_TXT": {
+        "en": "Increase Max HP by 10%/15%",
+        "kr": "최대 HP 10%/15% 증가"
+    },
+    "LINK_PIRATE_BLESS_TXT": {
+        "en": "Increase All Stats by 15/25, HP, MP by 5%/10%",
+        "kr": "올스탯 15/25, HP, MP 5%/10% 증가"
+    },
+    "LINK_CLOSE_CALL_TXT": {
+        "en": "5%/10% Chance to Live When Gets Lethal Attack",
+        "kr": "사망에 이르는 공격을 당할 시 5%/10% 확률로 생존"
+    }
+}

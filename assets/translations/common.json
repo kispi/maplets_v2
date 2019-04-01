@@ -259,6 +259,10 @@
         "en": "Legendary",
         "kr": "레전드리"
     },
+    "SKILL": {
+        "en": "Skill",
+        "kr": "스킬"
+    },
     "BOARD": {
         "en": "Board",
         "kr": "자유게시판"

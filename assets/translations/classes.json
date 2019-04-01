@@ -95,9 +95,17 @@
         "en": "Battlemage",
         "kr": "배틀메이지"
     },
-    "LUMINUS": {
-        "en": "Luminus",
+    "LUMINOUS": {
+        "en": "Luminous",
         "kr": "루미너스"
+    },
+    "CYGNUS_KNIGHTS": {
+        "en": "Cygnus Knights",
+        "kr": "시그너스 기사단"
+    },
+    "RESISTANCE": {
+        "en": "Resistance",
+        "kr": "레지스탕스"
     },
     "FLAMEWIZARD": {
         "en": "Flamewizard",

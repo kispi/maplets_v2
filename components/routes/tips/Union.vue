@@ -75,7 +75,7 @@ export default {
                             "ARCHMAGE_TC",
                             "VISHOP",
                             "BATTLEMAGE",
-                            "LUMINUS",
+                            "LUMINOUS",
                             "FLAMEWIZARD",
                             "KINESIS",
                             "ILLIUM"), "UNION_INT", "10", "20", "40", "80", "100"],
