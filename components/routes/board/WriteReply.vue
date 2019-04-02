@@ -116,7 +116,13 @@ export default {
                 this.$nuxt.$emit('onRepliesMutated', resp.data.data);
                 this.$toast.success("SAVED");
                 this.initReply();
-            } catch (e) { console.error(e) }
+            } catch (e) {
+                let errMsg = "ERROR_SAVE"
+                if (e.response && e.response.data) {
+                    errMsg = e.response.data
+                }
+                this.$toast.error(errMsg)
+            }
         }
     }
 }

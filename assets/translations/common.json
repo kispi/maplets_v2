@@ -43,6 +43,18 @@
         "en": "You can't whisper to yourself",
         "kr": "자기 자신에게는 귓속말을 할 수 없습니다"
     },
+    "ERROR_TOO_FREQUENT_WRITE_ARTICLE_ATTEMPT": {
+        "en": "Too frequent attempt to write the article",
+        "kr": "글 작성 시도수가 지나치게 잦습니다"
+    },
+    "ERROR_TOO_FREQUENT_WRITE_REPLY_ATTEMPT": {
+        "en": "Too frequent attempt to write the reply",
+        "kr": "댓글 작성 시도수가 지나치게 잦습니다"
+    },
+    "ERROR_SAVE": {
+        "en": "Failed to save",
+        "kr": "저장에 실패하였습니다"
+    },
     "ARTICLE_NOT_EXIST": {
         "en": "Article doesn't exist",
         "kr": "존재하지 않는 게시물입니다"

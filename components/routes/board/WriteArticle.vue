@@ -147,8 +147,11 @@ export default {
                 this.$toast.success("SAVED")
                 this.$router.push({ name: "board-articleId", params: { articleId: posted.id } })
             } catch (e) {
-                console.error(e)
-                this.$toast.error("FAILED")
+                let errMsg = "ERROR_SAVE"
+                if (e.response && e.response.data) {
+                    errMsg = e.response.data
+                }
+                this.$toast.error(errMsg)
             } finally {
                 this.$loading(false)
             }

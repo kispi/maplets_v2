@@ -35,7 +35,7 @@ export default {
     },
     mounted() {
         this.$nuxt.$on('onToast', payload => {
-            payload.message = payload.message.trim();
+            payload.message = (payload.message || "").trim();
             this.toast = payload
             this.toast.show = true
 
