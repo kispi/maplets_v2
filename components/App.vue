@@ -25,6 +25,7 @@ import Menu from '@/components/Menu'
 import Chat from '@/components/chat/Chat'
 import Loading from '@/components/app/Loading'
 import Toast from '@/components/app/Toast'
+import mobileDetect from '@/modules/mobile-detect'
 
 export default {
     components: {
@@ -61,6 +62,11 @@ export default {
                         img: require("@/assets/images/backgrounds/bg-" + bg.title + ".jpg")
                     }
                 })
+        }
+    },
+    mounted() {
+        if (mobileDetect()) {
+            document.getElementsByClassName("route")[0].classList.add("mobile")
         }
     }
 }
