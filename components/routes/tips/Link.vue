@@ -1,8 +1,8 @@
 <template>
     <div class="link route">
         <h2 class="m-b-16" :class="labelClass">{{ 'LINK_TITLE' | translate }}</h2>
-        <div class="m-b-40" :class="labelClass" v-html="$options.filters.translate('LINK_TXT')"/>
-        <div :key="idx" v-for="(item, idx) in allItems" class="m-b-32">
+        <div class="m-b-32" :class="labelClass" v-html="$options.filters.translate('LINK_TXT')"/>
+        <div :key="idx" v-for="(item, idx) in allItems" class="m-t-32">
             <h2 :class="labelClass">{{ item.title | translate }}</h2>
             <table>
                 <tbody>

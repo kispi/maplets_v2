@@ -1,6 +1,6 @@
 <template>
     <div class="union route">
-        <div :key="idx" v-for="(item, idx) in allItems" class="m-b-32">
+        <div :key="idx" v-for="(item, idx) in allItems" class="m-t-32">
             <h2 :class="labelClass">{{ item.title | translate }}</h2>
             <table>
                 <tbody>
