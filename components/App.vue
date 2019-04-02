@@ -74,6 +74,7 @@ export default {
 
     .mobile-wrapper {
         height: 100%;
+        overflow-y: scroll;
     }
 }
 </style>
