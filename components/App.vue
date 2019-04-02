@@ -2,9 +2,7 @@
     <div id="app">
         <div id="background" class="img-cover" :style="background"/>
         <transition name="fade">
-            <div class="mobile-wrapper">
-                <router-view/>
-            </div>
+            <router-view/>
         </transition>
         
         <div class="header flex-row flex-between">
@@ -71,11 +69,6 @@ export default {
 <style lang="less">
 #app {
     height: 100%;
-
-    .mobile-wrapper {
-        height: 100%;
-        overflow-y: scroll;
-    }
 }
 
 #__nuxt, #__layout {
