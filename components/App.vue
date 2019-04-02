@@ -40,6 +40,11 @@ export default {
             this.$router.push("/")
         }
     },
+    watch: {
+        $route() {
+            this.treatMobile()
+        }
+    },
     computed: {
         background() {
             if (this.$store.getters.background === "hide") return;
@@ -65,8 +70,13 @@ export default {
         }
     },
     mounted() {
-        if (mobileDetect()) {
-            document.getElementsByClassName("route")[0].classList.add("mobile")
+        this.treatMobile()
+    },
+    methods: {
+        treatMobile() {
+            if (mobileDetect()) {
+                document.getElementsByClassName("route")[0].classList.add("mobile")
+            }
         }
     }
 }
