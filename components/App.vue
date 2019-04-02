@@ -2,7 +2,9 @@
     <div id="app">
         <div id="background" class="img-cover" :style="background"/>
         <transition name="fade">
-            <router-view/>
+            <div class="mobile-wrapper">
+                <router-view/>
+            </div>
         </transition>
         
         <div class="header flex-row flex-between">
@@ -69,5 +71,9 @@ export default {
 <style lang="less">
 #app {
     padding: 16px;
+
+    .mobile-wrapper {
+        height: 100%;
+    }
 }
 </style>
