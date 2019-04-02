@@ -39,11 +39,6 @@ export default {
         onClickTitle() {
             this.$router.push("/")
         },
-        treatMobile() {
-            if (mobileDetect()) {
-                document.getElementsByClassName("route")[0].classList.add("mobile")
-            }
-        }
     },
     computed: {
         background() {
@@ -68,9 +63,6 @@ export default {
                     }
                 })
         }
-    },
-    mounted() {
-        this.treatMobile()
     },
 }
 </script>
