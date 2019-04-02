@@ -17,9 +17,6 @@ const config = {
         link: [
             { rel: 'icon', href: '/favicon.png' }
         ],
-        script: [
-            { src: '//ip.fatc.club' }
-        ]
     },
     css: [
         { src: '@/assets/styles/index.less', lang: 'less' },

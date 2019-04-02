@@ -1,12 +1,11 @@
 <template>
     <div class="reply">
-        <div class="flex-row flex-between items-center m-b-8">
+        <div class="flex-row flex-between items-center">
             <div class="flex-row">
                 <div class="flex-wrap flex-row">
-                    <span class="nickname lines-1" v-html="reply.nickname"></span>
-                    <small class="c-text" v-if="reply.ip">({{ reply.ip | ipFront }})</small>
+                    <small class="nickname lines-1" v-html="reply.nickname"></small>
+                    <small class="c-text" v-if="reply.ip && !reply.user">({{ reply.ip | ipFront }})</small>
                 </div>
-                <div class="flex-wrap m-l-8">({{ reply.createdAt | formatDate }})</div>
             </div>
             <div
                 class="delete-reply flex-row flex-wrap">
@@ -26,6 +25,7 @@
                 @click="onClickDeleteReply"></i>
         </div>
         <div class="pre-wrap" v-html="reply.text"></div>
+        <small>{{ reply.createdAt | formatDate }}</small>
     </div>
 </template>
 
