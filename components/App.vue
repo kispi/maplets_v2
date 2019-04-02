@@ -70,11 +70,15 @@ export default {
 
 <style lang="less">
 #app {
-    padding: 16px;
+    height: 100%;
 
     .mobile-wrapper {
         height: 100%;
         overflow-y: scroll;
     }
+}
+
+#__nuxt, #__layout {
+    height: 100%;
 }
 </style>

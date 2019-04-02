@@ -255,15 +255,6 @@ dl {
     opacity: 0.5;
 }
 
-#app {
-    height: 100%;
-    & > div {
-        &:first-child {
-            min-height: 100%;
-        }
-    }
-}
-
 .text-ellipsis {
    overflow: hidden;
    text-overflow: ellipsis;
@@ -399,7 +390,7 @@ dl {
     position: absolute;
     left: 8px;
     right: 8px;
-    padding-top: 40px;
+    padding-top: @header-height + 8px;
     padding-bottom: 160px;
     margin: auto;
     max-width: 800px;

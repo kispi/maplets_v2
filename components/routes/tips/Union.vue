@@ -140,7 +140,11 @@ export default {
             }
 
             &:nth-child(even) {
-                background: lightgray;                
+                background: #eee;                
+            }
+            
+            &:nth-child(odd) {
+                background: #ddd;
             }
         }
     }

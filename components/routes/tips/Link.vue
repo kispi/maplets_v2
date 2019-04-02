@@ -131,6 +131,7 @@ export default {
             &:nth-child(even) {
                 background: #eee;                
             }
+            
             &:nth-child(odd) {
                 background: #ddd;
             }
