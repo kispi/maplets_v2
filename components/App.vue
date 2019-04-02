@@ -40,11 +40,6 @@ export default {
             this.$router.push("/")
         }
     },
-    watch: {
-        $route() {
-            this.treatMobile()
-        }
-    },
     computed: {
         background() {
             if (this.$store.getters.background === "hide") return;
