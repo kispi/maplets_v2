@@ -38,6 +38,11 @@ export default {
     methods: {
         onClickTitle() {
             this.$router.push("/")
+        },
+        treatMobile() {
+            if (mobileDetect()) {
+                document.getElementsByClassName("route")[0].classList.add("mobile")
+            }
         }
     },
     computed: {
@@ -67,13 +72,6 @@ export default {
     mounted() {
         this.treatMobile()
     },
-    methods: {
-        treatMobile() {
-            if (mobileDetect()) {
-                document.getElementsByClassName("route")[0].classList.add("mobile")
-            }
-        }
-    }
 }
 </script>
 
