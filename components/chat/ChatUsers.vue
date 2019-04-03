@@ -41,7 +41,6 @@ export default {
 </script>
 <style lang="less">
 .chat-users {
-    border-left: 1px dashed lightgray;
     width: 120px;
     padding: 4px;
 

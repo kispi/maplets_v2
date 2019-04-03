@@ -74,6 +74,17 @@
             overflow-y: scroll;
             font-size: @font-size-chat;
             line-height: @font-size-chat;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+                padding: 1px;
+                .bgm-rare();
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                .bgm-legendary();
+            }
         }
     }    
 
