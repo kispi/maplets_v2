@@ -43,42 +43,20 @@ export default {
         selected: 0,
         limit: -1,
     }),
+    props: ['articles', 'article', 'board'],
     head: () => ({
         title: '자유게시판 :: MAPLETs',
         meta: [
             { name: 'description', content: '익명 사용 가능한 자유게시판입니다. 계정생성 & 로그인 기능은 추후 제공 될 수 있습니다.' }
         ]
     }),
-    computed: {
-        articles() {
-            return this.$store.getters.articles
-        },
-        article() {
-            return this.$store.getters.article
-        },
-        board() {
-            return this.$store.getters.board
-        }
-    },
-    watch: {
-        async $route(to, from) {
-            this.reload()
-        }
-    },
     created() {
         this.$nuxt.$on('onRepliesMutated', this.reload)
     },
     beforeDestroy() {
         this.$nuxt.$off('onRepliesMutated', this.reload)
     },
-    mounted() {
-        this.init()
-    },
     methods: {
-        async init() {
-            await this.$store.dispatch('loadBoard')
-            this.reload();
-        },
         async reload() {
             if (!this.board) {
                 return
@@ -87,23 +65,26 @@ export default {
             let query = this.defaultQuery().offset(this.limit * this.selected).where("board_id", this.board.id);
             try {
                 await this.$store.dispatch('loadArticles', query.build())
-            } catch (e) {
-                return
-            }
+                this.$store.getters.articles.forEach(newAtc => {
+                    this.articles.some(oldAtc => {
+                        if (newAtc.id === oldAtc.id) {
+                            oldAtc.replyCount = newAtc.replyCount
+                            return
+                        }
+                    })
+                })
+            } catch (e) { return }
 
             try {
                 await this.$store.dispatch('loadArticle', this.$route.params.articleId)
+                this.article.replies = this.$store.getters.article.replies
             } catch (e) {
                 this.$toast.error("ARTICLE_NOT_EXIST")
                 this.$router.push({
                     name: "board"
                 })
             }
-            this.$scrollToTop();
-        },
-        onClickPage(page) {
-            this.selected = page
-            this.reload()
+            this.$forceUpdate();
         },
         onClickWrite() {
             this.$router.push({
@@ -111,7 +92,7 @@ export default {
             })
         },
         defaultQuery() {
-            return this.$qb().sortby("id").order("desc").limit(this.limit)
+            return this.$qb().sortby("id").order("desc").limit(20)
         }
     }
 }

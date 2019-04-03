@@ -18,6 +18,11 @@ const config = {
             { rel: 'icon', href: '/favicon.png' }
         ],
     },
+    router: {
+        scrollBehavior: () => {
+            return { x: 0, y: 0 }
+        }
+    },
     css: [
         { src: '@/assets/styles/index.less', lang: 'less' },
     ],
