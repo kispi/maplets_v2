@@ -25,6 +25,7 @@ import Menu from '@/components/Menu'
 import Chat from '@/components/chat/Chat'
 import Loading from '@/components/app/Loading'
 import Toast from '@/components/app/Toast'
+import mobileDetect from '@/modules/mobile-detect'
 
 export default {
     components: {
@@ -37,7 +38,7 @@ export default {
     methods: {
         onClickTitle() {
             this.$router.push("/")
-        }
+        },
     },
     computed: {
         background() {
@@ -62,7 +63,7 @@ export default {
                     }
                 })
         }
-    }
+    },
 }
 </script>
 
