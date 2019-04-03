@@ -50,7 +50,7 @@ export default {
             { name: 'description', content: '익명 사용 가능한 자유게시판입니다. 계정생성 & 로그인 기능은 추후 제공 될 수 있습니다.' }
         ]
     }),
-    created() {
+    mounted() {
         this.$nuxt.$on('onRepliesMutated', this.reload)
     },
     beforeDestroy() {
@@ -78,6 +78,7 @@ export default {
             try {
                 await this.$store.dispatch('loadArticle', this.$route.params.articleId)
                 this.article.replies = this.$store.getters.article.replies
+                this.article.replyCount = (this.article.replies || []).length
             } catch (e) {
                 this.$toast.error("ARTICLE_NOT_EXIST")
                 this.$router.push({
