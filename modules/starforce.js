@@ -1,4 +1,4 @@
-const starforce = function() {
+const starforce = () => {
     const TYPE_ARMOR = "ARMOR"
     const TYPE_GLOVE = "GLOVE"
     const TYPE_WEAPON = "WEAPON"

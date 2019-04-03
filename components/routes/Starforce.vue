@@ -152,9 +152,6 @@ export default {
                     { title: "STARFORCE_ARMOR", value: "ARMOR" },
                     { title: "STARFORCE_GLOVE", value: "GLOVE" }]
         },
-        starforceCalculator() {
-            return starforce()
-        },
         numStarRows() {
             let numStars = this.$numArray(26)
             return [numStars.slice(0, 16), numStars.slice(16)]
@@ -231,7 +228,7 @@ export default {
             })
             
             if (this.mode === "REVERSE") {
-                this.result = this.starforceCalculator.bulkStarforceReverse(
+                this.result = starforce().bulkStarforceReverse(
                     this.starforce.lev,
                     this.starforce.stars,
                     this.starforce.basicAD,
@@ -240,7 +237,7 @@ export default {
                     this.starforce.type
                 )
             } else if (this.mode === "NORMAL") {
-                this.result = this.starforceCalculator.bulkStarforce(
+                this.result = starforce().bulkStarforce(
                     this.starforce.lev,
                     this.starforce.stars,
                     this.starforce.basicAD,
