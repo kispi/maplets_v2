@@ -325,7 +325,7 @@ export default {
             }, 0)
         },
         pushMessageToArray(message) {
-            if ((this.messages || []).length >= 200) {
+            if ((this.messages || []).length >= 100) {
                 this.messages.shift()
             }
             this.messages.push(message)
