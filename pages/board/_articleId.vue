@@ -12,7 +12,6 @@ import qb from '@/plugins/querybuilder'
 export default {
     layout: 'default',
     components: { Board },
-    scrollToTop: true,
     async asyncData({ app, params, store, redirect }) {
         let board, article, articles;
 
