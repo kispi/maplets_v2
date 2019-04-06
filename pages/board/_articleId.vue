@@ -12,7 +12,7 @@ import qb from '@/plugins/querybuilder'
 export default {
     layout: 'default',
     components: { Board },
-    async asyncData({ app, params, store }) {
+    async asyncData({ app, params, store, redirect }) {
         let board, article, articles;
 
         const defaultQuery = () => {
@@ -36,7 +36,9 @@ export default {
         try {
             await store.dispatch('loadArticle', params.articleId)
             article = store.getters.article
-        } catch (e) { return }
+        } catch (e) {
+            redirect("/not-found")
+        } 
         
         return {
             board,

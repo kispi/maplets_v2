@@ -1,9 +1,23 @@
 <template>
-    <div class="not-found">
-        <div class="f-700 f-28 m-b-30">
-            {{ 'NOT_FOUND' | translate }}
-        </div>
-        <div class="instruction" v-html="instruction">
+    <div class="not-found route">
+        <div class="container flex-row items-center">
+            <div class="c-white text-center flex-row items-center">
+                <div>
+                    <img src="@/assets/images/orange_mushroom.png">
+                    <div
+                        :class="labelClass"
+                        class="text-xxl m-t-8">404</div>
+                    <div
+                        :class="labelClass"
+                        class="text-xl"
+                        v-html="$options.filters.translate('NOT_FOUND')"></div>
+                    <button
+                        @click="onClick404"
+                        class="btn bgm-legendary btn-lg b-md m-a m-t-16">
+                        {{ 'GO_TO_BOARD' | translate }}
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -11,26 +25,16 @@
 <script>
 export default {
     computed: {
-        instruction() {
-            return this.$translate('NOT_FOUND_INSTRUCTION');
+        labelClass() {
+            return this.$store.getters.background === "show" ? "c-white" : "c-text-dark"
         }
     },
-}
-</script>
-
-<style lang="less" scoped>
-.not-found {
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translateX(-50%);
-    text-align: center;
-    padding: 16px;
-
-    > .instruction {
-        font-size: 20px;
-        line-height: 24px;
+    methods: {
+        onClick404() {
+            this.$router.push({
+                name: "board"
+            })
+        },
     }
 }
-</style>
+</script>

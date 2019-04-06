@@ -75,6 +75,14 @@
         "en": "Couldn't find the user '%s'",
         "kr": "'%s'님을 찾지 못했습니다"
     },
+    "NOT_FOUND": {
+        "en": "Oops, page does not exist!",
+        "kr": "존재하지 않는 페이지입니다!"
+    },
+    "GO_TO_BOARD": {
+        "en": "Go back to board",
+        "kr": "게시판으로 돌아가기"
+    },
     "DISCONNECTED": {
         "en": "Disconnected with the chat server",
         "kr": "채팅서버와의 연결이 끊어졌습니다"
