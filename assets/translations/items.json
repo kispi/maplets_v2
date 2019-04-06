@@ -1,0 +1,38 @@
+{
+    "CUBE_MASTER": {
+        "en": "Master Craftsman's Cube",
+        "kr": "장인의 큐브"
+    },
+    "CUBE_MEISTER": {
+        "en": "Meister's Cube",
+        "kr": "명장의 큐브"
+    },
+    "CUBE_RED": {
+        "en": "Red Cube",
+        "kr": "레드 큐브"
+    },
+    "CUBE_BLACK": {
+        "en": "Black Cube",
+        "kr": "블랙 큐브"
+    },
+    "CUBE_ADDITIONAL": {
+        "en": "Additional Cube",
+        "kr": "에디셔널 큐브"
+    },
+    "CUBE": {
+        "en": "Cube",
+        "kr": "큐브"
+    },
+    "CUBE_EPIC": {
+        "en": "Rare => Epic",
+        "kr": "레어 => 에픽"
+    },
+    "CUBE_UNIQUE": {
+        "en": "Epic => Unique",
+        "kr": "에픽 => 유니크"
+    },
+    "CUBE_LEGENDARY": {
+        "en": "Unique => Legendary",
+        "kr": "유니크 => 레전드리"
+    }
+}

@@ -171,14 +171,6 @@
         "en": "English",
         "kr": "영어"
     },
-    "SHOW_BACKGROUND": {
-        "en": "Show Background",
-        "kr": "배경 보이기"
-    },
-    "HIDE_BACKGROUND": {
-        "en": "Hide Background",
-        "kr": "배경 감추기"
-    },
     "SHOW_CHAT": {
         "en": "Show Chat",
         "kr": "채팅 보이기"
@@ -275,6 +267,14 @@
         "en": "Skill",
         "kr": "스킬"
     },
+    "CUBE_PROBABILITY": {
+        "en": "Potential Ability Upgrade Probability For Each Cube",
+        "kr": "큐브별 아이템 등급업 확률"
+    },
+    "CUBE_PROBABILITY_TXT": {
+        "en": "Cube Probability is public in Chinese Maplestory.<br>Perhaps <span class='c-accent text-xl text-underline'>the probability on the CMS will be the same in the KMS</span><br>(Meister's Cube is claimed to have the same performace with Red Cube.)",
+        "kr": "중국 메이플스토리에서는 큐브별 등급업 확률이 공개되어있습니다.<br><span class='c-accent text-xl text-underline'>중국 메이플스토리에서 공개된 확률들은 한국 메이플스토리에서도 동일할 것</span>이라는 추측이 학계의 정설입니다.<br>(명장의 큐브의 확률은 레드 큐브의 성능과 동일하다고 알려져 있습니다.)"
+    },
     "BOARD": {
         "en": "Board",
         "kr": "자유게시판"
@@ -284,8 +284,8 @@
         "kr": "정보"
     },
     "CHAT_HELP": {
-        "en": "You can set the world and nickname.\nWe don't ensure the person is the real owner of the nickname.\nMessages are shown up to number 200.\nMessages are not saved so if you restart the ap they're gone.",
-        "kr": "월드와 닉네임을 설정할 수 있습니다.\n실제 인물임을 보장하지 않습니다. 사칭에 유의하세요.\n대화내역은 최대 200개까지 노출됩니다.\n대화내역은 저장되지 않으며, 앱을 재시작하면 사라집니다."
+        "en": "You can set the world and nickname.\nWe don't ensure the person is the real owner of the nickname.\nMessages are shown up to number 100.\nMessages are not saved so if you restart the ap they're gone.",
+        "kr": "월드와 닉네임을 설정할 수 있습니다.\n실제 인물임을 보장하지 않습니다. 사칭에 유의하세요.\n대화내역은 최대 100개까지 노출됩니다.\n대화내역은 저장되지 않으며, 앱을 재시작하면 사라집니다."
     },
     "SET_NICKNAME": {
         "en": "Setnick",

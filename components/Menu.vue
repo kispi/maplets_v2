@@ -1,8 +1,11 @@
 <template>
     <div class="menu" :ref="'menu'">
-        <i
-            class="toggle-menu zmdi" :class="{'zmdi-menu': !show, 'zmdi-close': show}"
-            @click="show = !show"/>
+        <div class="icons flex-row">
+            <Settings/>
+            <i
+                class="toggle-menu zmdi" :class="{'zmdi-menu': !show, 'zmdi-close': show}"
+                @click="show = !show"/>
+        </div>
         <transition name="slide-left">
             <ul class="shadow bgm-white p-0" v-show="show">
                 <li
@@ -20,8 +23,11 @@
 </template>
 
 <script>
+import Settings from '@/components/Settings'
+
 export default {
     name: 'Menu',
+    components: { Settings },
     data: _ => ({
         selectedRoute: null,
         show: false
@@ -51,10 +57,6 @@ export default {
                 title: "BOARD",
                 icon: "zmdi-format-list-bulleted",
                 route: "board"
-            }, {
-                title: "SETTINGS",
-                icon: "zmdi-settings",
-                route: "settings"
             }, {
                 title: "ABOUT",
                 icon: "zmdi-help",

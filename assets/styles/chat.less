@@ -75,16 +75,7 @@
             font-size: @font-size-chat;
             line-height: @font-size-chat;
 
-            &::-webkit-scrollbar {
-                width: 8px;
-                padding: 1px;
-                .bgm-rare();
-            }
-
-            &::-webkit-scrollbar-thumb {
-                border-radius: 4px;
-                .bgm-legendary();
-            }
+            .pretty-scrollbar();
         }
     }    
 
@@ -93,15 +84,16 @@
         padding: 1px;
 
         .chat-type, button {
-            border-radius: 2px;
+            border-radius: 4px;
             padding: 2px;
             box-shadow: inset 0 0 16px @chat-window-border;
             color: #fff;
             cursor: pointer;
-            min-height: initial !important;
             background: none;
+            min-height: initial !important;
             font-size: @font-size-chat;
             line-height: @font-size-chat;
+            border: 1px solid gray;
         }
 
         input {

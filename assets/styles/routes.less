@@ -162,9 +162,24 @@
     table {
         border-radius: 4px;
         overflow: hidden;
+    }
+}
 
-        tr:first-child {
-            border-bottom: 1px dotted #000;
+.union, .cube-probability {
+    tr:first-child {
+        border-bottom: 1px dotted #000;
+    }
+}
+
+.cube-probability {
+    .flex-row {
+        .flex-fill {
+            color: #fff;
+            padding: 8px;
+            justify-content: center;
+
+            .flex-row();
+            .items-center();
         }
     }
 }

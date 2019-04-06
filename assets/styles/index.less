@@ -19,7 +19,7 @@ i {
 @import 'modals';
 @import 'preloader';
 @import 'routes';
-@import 'tables';
+@import 'table';
 @import 'text';
 @import 'toast';
 @import 'variables';
@@ -333,16 +333,26 @@ dl {
 }
 
 .no-scrollbar {
+    &::-webkit-scrollbar {
+        width: 0px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+            
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
 
-    @media (max-width: @screen-xs-max) {
-        &::-webkit-scrollbar {
-            width: 0px;
-            background-color: rgba(0, 0, 0, 0);
-        }
-                
-        &::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, 0);
-        }
+.pretty-scrollbar {
+    &::-webkit-scrollbar {
+        width: 8px;
+        padding: 1px;
+        .bgm-rare();
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        .bgm-legendary();
     }
 }
 
@@ -395,6 +405,7 @@ dl {
     padding-bottom: 160px;
     margin: auto;
     max-width: @screen-sm;
+    .no-scrollbar();
 }
 
 @media (max-width: @screen-xs) {
@@ -405,13 +416,7 @@ dl {
 }
 
 .toggle-menu {
-    font-size: 24px;
-    padding: 12px;
-    width: 56px;
-    height: 48px;
     z-index: 2;
-    background: #fff;
-    cursor: pointer;
 }
 
 @keyframes tabbar-down {
@@ -446,6 +451,17 @@ dl {
 
     .menu {
         z-index: 2;
+
+        .icons {
+            i {
+                font-size: 24px;
+                padding: 12px;
+                width: 56px;
+                height: 48px;
+                background: #fff;
+                cursor: pointer;
+            }
+        }
     
         ul {
             position: fixed;

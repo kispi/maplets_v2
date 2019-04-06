@@ -15,10 +15,10 @@
             </div>
         </div>
         <div class="m-t-24 p-16 pre-wrap card shadow m-b-40">
-            <div v-html="$options.filters.translate('ABOUT_MAPLETS_1')"></div>
-            <div class="m-t-16" v-html="$options.filters.translate('ABOUT_MAPLETS_2')"></div>
-            <div class="m-t-16" v-html="$options.filters.translate('ABOUT_MAPLETS_3')"></div>
-            <div class="m-t-16" v-html="$options.filters.translate('ABOUT_MAPLETS_4')"></div>
+            <div v-html="$translate('ABOUT_MAPLETS_1')"></div>
+            <div class="m-t-16" v-html="$translate('ABOUT_MAPLETS_2')"></div>
+            <div class="m-t-16" v-html="$translate('ABOUT_MAPLETS_3')"></div>
+            <div class="m-t-16" v-html="$translate('ABOUT_MAPLETS_4')"></div>
         </div>
         <div class="updates p-16 card shadow">
             <ul class="m-b-32" v-for="day in updates" :key="day.timestamp">
@@ -122,6 +122,11 @@ export default {
                     timestamp: "2019-04-03",
                     jobs: [
                         '자유게시판에 SEO 적용'
+                    ]
+                }, {
+                    timestamp: "2019-04-06",
+                    jobs: [
+                        '큐브 확률 페이지 추가 & 설정 페이지 삭제 및 메뉴 좌측으로 이동'
                     ]
                 }
             ]

@@ -17,7 +17,7 @@
                             class="text-center flex-fill"
                             :class="{'selected': lev === idx + 1}"
                             v-for="(_, idx) in $numArray(10)"
-                            @click="lev = idx + 1"
+                            @click="onSetLev(idx + 1)"
                             :key="idx">
                             {{ idx + 1 }}
                         </div>
@@ -27,7 +27,7 @@
                             class="text-center flex-fill"
                             :class="{'selected': lev === idx + 11}"
                             v-for="(_, idx) in $numArray(10)"
-                            @click="lev = idx + 11"
+                            @click="onSetLev(idx + 11)"
                             :key="idx">
                             {{ idx + 11 }}
                         </div>
@@ -52,11 +52,13 @@
 
 <script>
 import RadioButtons from '@/components/app/RadioButtons'
+import arcane from '@/modules/arcane'
 
 export default {
     name: 'Arcane',
     data: () => ({
         lev: 1,
+        selected: "vanishingRoad",
     }),
     head: () => ({
         title: '아케인 심볼 계산기 :: MAPLETs',
@@ -70,46 +72,31 @@ export default {
             return this.$translate('TO_LEV').replace(/%s/g, this.lev)
         },
         numSymbols() {
-            return this.$arcane.exp(this.lev)
+            return arcane.exp(this.lev)
         },
         totalNumSymbols() {
-            return this.$arcane.totalExp(this.lev)
+            return arcane.totalExp(this.lev)
         },
         fee() {
-            return this.$arcane.fee(this.lev)
+            return arcane.fee(this.lev, this.selected)
         },
         totalFee() {
-            return this.$arcane.totalFee(this.lev)
+            return arcane.totalFee(this.lev, this.selected)
         },
         arcaneRivers() {
             return [{ title: "VANISHING_ROAD", value: 'vanishingRoad' }, { title: "OTHER_AREAS", value: 'others' }]
-        },
-        selected: {
-            get() {
-                return this.$store.getters.selectedArcaneRiverArea
-            },
-            set(area) {
-                this.$store.commit('setArcaneRiverArea', area)
-            }
         },
         labelClass() {
             return this.$store.getters.background === "show" ? "c-white" : "c-text-dark"
         }
     },
-    watch: {
-        lev(val) {
-            val = parseInt(val)
-            if (typeof val !== "number" || val < 1) {
-                this.lev = 1
-            } else if (val >= 20) {
-                this.lev = 20
-            }
-        }
-    },
     methods: {
         onSelectArea(area) {
-            this.selected = area
-        }
+            this.selected = area.value
+        },
+        onSetLev(lev) {
+            this.lev = lev
+        },
     }
 }
 </script>

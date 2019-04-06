@@ -2,7 +2,7 @@
     <div class="union route">
         <div :key="idx" v-for="(item, idx) in allItems" class="m-t-32">
             <h2 :class="labelClass">{{ item.title | translate }}</h2>
-            <table>
+            <table class="table-default">
                 <tbody>
                     <tr :key="idx" v-for="(row, idx) in item.items">
                         <td :key="val" v-for="val in row">{{ val | translate }}</td>
@@ -112,41 +112,8 @@ export default {
     },
     methods: {
         concatTranslatedWords(...words) {
-            return words.map(w => this.$options.filters.translate(w)).join("\n")
+            return words.map(w => this.$translate(w)).join("\n")
         }
     }
 }
 </script>
-<style lang="less">
-.union {
-    table {
-        display: table;
-        background: #fff;
-        border-spacing: 0;
-        border-collapse: collapse;
-        width: 100%;
-
-        tr {
-            font-weight: 700;
-
-            td {
-                text-align: center;
-                padding: 8px;
-
-                &:first-child {
-                    min-width: 120px;
-                    white-space: pre-wrap;
-                }
-            }
-
-            &:nth-child(even) {
-                background: #eee;                
-            }
-            
-            &:nth-child(odd) {
-                background: #ddd;
-            }
-        }
-    }
-}
-</style>

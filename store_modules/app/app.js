@@ -2,16 +2,12 @@
 const state = {
     background: 'show',
     chat: 'hide',
-    selectedArcaneRiverArea: 'vanishingRoad',
     users: [],
     userWhisperedToMe: null
 }
 
 // getters
 const getters = {
-    selectedArcaneRiverArea(state) {
-        return state.selectedArcaneRiverArea
-    },
     chat(state) {
         return state.chat
     },
@@ -54,12 +50,6 @@ const mutations = {
             return
         }
         state.userWhisperedToMe = payload
-    },
-    setArcaneRiverArea(state, payload) {
-        if (payload === undefined) {
-            return
-        }
-        state.selectedArcaneRiverArea = payload.value
     },
 }
 

@@ -49,7 +49,7 @@
                         <ChatUsers class="flex-wrap" v-show="chat === 'show'" @onClickUser="focusChatInputBox"/>
                     </div>
                     <div class="flex-row items-center chat-status">
-                        <div class="btn flex-wrap chat-type text-ellipsis" @click="showConfirmChatType = true">{{ displayedChatType }}</div>
+                        <button class="btn flex-wrap chat-type text-ellipsis" @click="showConfirmChatType = true">{{ displayedChatType }}</button>
                         <input
                             class="flex-fill"
                             :disabled="disableChat"
@@ -134,7 +134,7 @@ export default {
         if (!mobileDetect()) {
             this.chat = "show"
         }
-        this.$options.filters.translate("CHAT_HELP").split("\n").forEach(msg => {
+        this.$translate("CHAT_HELP").split("\n").forEach(msg => {
             this.pushNoticeMessage(msg)
         })
     },
@@ -325,7 +325,7 @@ export default {
             }, 0)
         },
         pushMessageToArray(message) {
-            if ((this.messages || []).length >= 200) {
+            if ((this.messages || []).length >= 100) {
                 this.messages.shift()
             }
             this.messages.push(message)

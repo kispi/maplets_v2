@@ -1,5 +1,3 @@
-import Vue from 'vue'
-
 const maxFee = 137840000
 const feeVR = 7130000
 const feeOthers = 6600000
@@ -30,35 +28,31 @@ requiredFee.others.push(0)
 
 requiredExp.push(0)
 
-export default ({ app, store }, inject) => {
-    const Arcane = {
-        exp: function(lev) {
-            lev = parseInt(lev)
-            return requiredExp[lev]
-        },
-        totalExp: function(targetLev) {
-            targetLev = parseInt(targetLev)
-            let total = 0;
-            for (let lev = 1; lev <= targetLev-1; lev++) {
-                total += this.exp(lev)
-            }
-            return total
-        },
-        fee: function(lev) {
-            let area = store.getters.selectedArcaneRiverArea;
-            lev = parseInt(lev)
-            return requiredFee[area][parseInt(lev)]
-        },
-        totalFee: function(targetLev) {
-            targetLev = parseInt(targetLev)
-            let total = 0;
-            for (let lev = 1; lev <= targetLev-1; lev++) {
-                total += this.fee(lev)
-            }
-            return total
+let Arcane = {
+    exp: function(lev) {
+        lev = parseInt(lev)
+        return requiredExp[lev]
+    },
+    totalExp: function(targetLev) {
+        targetLev = parseInt(targetLev)
+        let total = 0;
+        for (let lev = 1; lev <= targetLev-1; lev++) {
+            total += this.exp(lev)
         }
+        return total
+    },
+    fee: function(lev, area) {
+        lev = parseInt(lev)
+        return requiredFee[area][lev]
+    },
+    totalFee: function(targetLev, area) {
+        targetLev = parseInt(targetLev)
+        let total = 0;
+        for (let lev = 1; lev <= targetLev-1; lev++) {
+            total += this.fee(lev, area)
+        }
+        return total
     }
-
-    Vue.prototype.$arcane = Arcane
-    Vue.use(Arcane)
 }
+
+export default Arcane

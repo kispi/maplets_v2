@@ -1,10 +1,10 @@
 <template>
     <div class="link route">
         <h2 class="m-b-16" :class="labelClass">{{ 'LINK_TITLE' | translate }}</h2>
-        <div class="m-b-32" :class="labelClass" v-html="$options.filters.translate('LINK_TXT')"/>
+        <div class="m-b-32" :class="labelClass" v-html="$translate('LINK_TXT')"/>
         <div :key="idx" v-for="(item, idx) in allItems" class="m-t-32">
             <h2 :class="labelClass">{{ item.title | translate }}</h2>
-            <table>
+            <table class="table-default">
                 <tbody>
                     <tr :key="idxTr" v-for="(row, idxTr) in item.items">
                         <td :key="val" v-for="(val, idxTd) in row">
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: 'Union',
+    name: 'Link',
     head: () => ({
         title: '링크 스킬 정리 :: MAPLETs',
         meta: [
@@ -111,31 +111,3 @@ export default {
     }
 }
 </script>
-<style lang="less">
-.link {
-    table {
-        display: table;
-        background: #fff;
-        border-spacing: 0;
-        border-collapse: collapse;
-        width: 100%;
-
-        tr {
-            font-weight: 700;
-
-            td {
-                text-align: center;
-                padding: 8px;
-            }
-
-            &:nth-child(even) {
-                background: #eee;                
-            }
-            
-            &:nth-child(odd) {
-                background: #ddd;
-            }
-        }
-    }
-}
-</style>
