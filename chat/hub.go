@@ -101,7 +101,7 @@ func (h *Hub) Broadcast(message *Message, status string) {
 func (h *Hub) newUser() *User {
 	return &User{
 		AuthToken: h.generateToken(),
-		Nickname:  h.generateToken(),
+		Nickname:  "익명" + h.generateToken(),
 		World:     "NONE",
 	}
 }
