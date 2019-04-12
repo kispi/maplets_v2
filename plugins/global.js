@@ -82,16 +82,6 @@ export const Copy = {
     }
 }
 
-export const IP = {
-    install(Vue) {
-        Vue.prototype.$ip = function() {
-            if (window.ip) {
-                return window.ip();
-            }
-        }
-    }
-}
-
 export const Api = {
     install(Vue) {
         Vue.prototype.$api = api
@@ -105,6 +95,5 @@ Vue.use(numArray)
 Vue.use(Loading)
 Vue.use(ScrollToTop)
 Vue.use(Copy)
-Vue.use(IP)
 Vue.use(Api)
 Vue.use(VueMoment)

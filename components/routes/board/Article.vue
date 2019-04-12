@@ -31,6 +31,11 @@
                 </div>
             </div>
             <div class="text pre-wrap" v-html="article.text"></div>
+            <div class="expressions-article">
+                <Expressions
+                    :referenceType="'article'"
+                    :obj="article"/>
+            </div>
             <Replies :article="article"/>
         </div>
     </div>
@@ -38,6 +43,7 @@
 
 <script>
 import ArticleHeader from '@/components/routes/board/ArticleHeader'
+import Expressions from '@/components/routes/board/Expressions'
 import Replies from '@/components/routes/board/Replies'
 import Modal from '@/components/modals/Modal'
 
@@ -48,7 +54,7 @@ export default {
         password: null,
         showConfirmPassword: false,
     }),
-    components: { ArticleHeader, Replies, Modal },
+    components: { ArticleHeader, Expressions, Replies, Modal },
     methods: {
         onClickEdit() {
             this.$router.push({

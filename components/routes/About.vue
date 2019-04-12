@@ -20,20 +20,32 @@
             <div class="m-t-16" v-html="$translate('ABOUT_MAPLETS_3')"></div>
             <div class="m-t-16" v-html="$translate('ABOUT_MAPLETS_4')"></div>
         </div>
+
         <div class="updates p-16 card shadow">
-            <ul class="m-b-32" v-for="day in updates" :key="day.timestamp">
-                <div class="m-b-16">{{ day.timestamp | formatDate("MMM DD, YYYY") }}</div>
-                <li class="m-l-16 m-b-8" v-for="job in day.jobs" :key="job">
-                    <div v-html="job"></div>
-                </li>
-            </ul>
+            <div class="c-accent text-center text-underline" @click="showUpdates = !showUpdates">{{ 'SHOW_UPDATES' | translate }}</div>
+            <TransitionExpand>
+                <div v-if="showUpdates">
+                    <ul class="m-b-32" v-for="day in updates" :key="day.timestamp">
+                        <div class="m-b-16">{{ day.timestamp | formatDate("MMM DD, YYYY") }}</div>
+                        <li class="m-l-16 m-b-8" v-for="job in day.jobs" :key="job">
+                            <div v-html="job"></div>
+                        </li>
+                    </ul>
+                </div>
+            </TransitionExpand>
         </div>
     </div>
 </template>
 
 <script>
+import TransitionExpand from '@/components/app/TransitionExpand'
+
 export default {
     name: 'About',
+    components: { TransitionExpand },
+    data: () => ({
+        showUpdates: false,
+    }),
     head: () => ({
         title: '정보 :: MAPLETs',
         meta: [
@@ -132,6 +144,11 @@ export default {
                     timestamp: "2019-04-06",
                     jobs: [
                         '큐브 확률 페이지 추가 & 설정 페이지 삭제 및 메뉴 좌측으로 이동'
+                    ]
+                }, {
+                    timestamp: "2019-04-13",
+                    jobs: [
+                        '게시물, 댓글 추천/비추천 기능 추가'
                     ]
                 }
             ]

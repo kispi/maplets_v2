@@ -4,18 +4,16 @@
         :class="selected()"
         @click="onClickArticle">
         <div class="m-b-8">
-            <small class="m-r-8">[{{ article.id }}]</small><span v-html="article.title"></span>
-            <span class="c-red m-l-8" v-if="replyCount > 0">[{{ replyCount }}]</span>
+            <small>[{{ article.id }}]</small><span class="m-l-5" v-html="article.title"></span><span class="c-red m-l-5" v-if="replyCount > 0">[{{ replyCount }}]</span>
         </div>
-        <div class="flex-row flex-between items-center">
-            <div class="flex-row">
+        <div class="flex-row items-center info">
+            <div class="flex-wrap flex-row">
                 <small class="nickname" v-html="article.nickname"></small>
                 <small v-if="article.ip && !article.user">({{ article.ip | ipFront }})</small>
             </div>
-            <div class="flex-row">
-                <div class="flex-wrap m-l-8">{{ article.createdAt | formatDate }}</div>
-                <div class="flex-wrap lines-1 m-l-8">{{ 'VIEWS' | translate }}: {{ article.views }}</div>
-            </div>
+            <small class="flex-wrap">{{ article.createdAt | formatDate }}</small>
+            <small class="flex-wrap">{{ 'VIEWS' | translate }}: {{ article.views }}</small>
+            <small class="flex-wrap" v-if="(article.expressions || {}).up">{{ 'EXPRESS_UP' | translate }} {{ article.expressions.up }}</small>
         </div>
     </div>
 </template>
@@ -28,6 +26,17 @@ export default {
         replyCount() {
             return this.article.replyCount || (this.article.replies || []).length;
         },
+    },
+    mounted() {
+        this.$nuxt.$on('onExpressed', article => {
+            if (this.article.id === article.id) {
+                this.article.expressions = article.expressions
+                this.$forceUpdate()
+            }
+        })
+    },
+    beforeDestroy() {
+        this.$nuxt.$off('onExpressed')
     },
     methods: {
         onClickArticle() {
@@ -44,3 +53,17 @@ export default {
     }
 }
 </script>
+<style lang="less">
+.article-header {
+    .info {
+        .flex-wrap {
+            &:not(:last-child)::after {
+                font-size: 7px;
+                color: lightgray;
+                content: "|";
+                margin: 0 4px;
+            }
+        }
+    }
+}
+</style>

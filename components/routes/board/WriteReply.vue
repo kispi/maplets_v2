@@ -75,10 +75,21 @@ export default {
                 this.reply.article.id = newVal.id
             },
             deep: true
+        },
+        user: {
+            handler() {
+                this.initReply()
+            },
+            deep: true
         }
     },
     mounted() {
-        this.initReply();
+        this.initReply()
+    },
+    computed: {
+        user() {
+            return this.$store.getters.user
+        }
     },
     methods: {
         initReply() {
@@ -87,10 +98,9 @@ export default {
                     id: this.article.id
                 },
                 user: null,
-                nickname: this.$store.getters.user.nickname,
+                nickname: this.user.nickname,
                 password: null,
                 text: null,
-                ip: this.$ip()
             }
         },
         async onClickSave() {

@@ -25,13 +25,23 @@
                 @click="onClickDeleteReply"></i>
         </div>
         <div class="pre-wrap" v-html="reply.text"></div>
-        <small>{{ reply.createdAt | formatDate }}</small>
+        <div class="flex-row flex-between items-center">
+            <small>{{ reply.createdAt | formatDate }}</small>
+            <div class="expressions-reply">
+                <Expressions
+                    :referenceType="'reply'"
+                    :obj="reply"/>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import Expressions from '@/components/routes/board/Expressions'
+
 export default {
     name: "Reply",
+    components: { Expressions },
     props: ['reply'],
     data: () => ({
         showDeleteConfirm: false,
@@ -52,7 +62,10 @@ export default {
         onClickDeleteReply() {
             this.showDeleteConfirm = !this.showDeleteConfirm
             setTimeout(_ => {
-                this.$refs['replyPassword'].focus()
+                let dom = this.$refs['replyPassword']
+                if (dom) {
+                    dom.focus()
+                }
             }, 0)
         }
     }

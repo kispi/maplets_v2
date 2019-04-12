@@ -72,7 +72,6 @@ export default {
         },
         valid: false,
         validLength: false,
-        passedArticle: null,
         writeAllowed: false,
     }),
     components: { Modal },
@@ -187,7 +186,6 @@ export default {
         async init() {
             if (!this.$route.params.articleId) {
                 this.writeAllowed = true
-                this.article.ip = this.$ip()
                 this.article.nickname = this.$store.getters.user.nickname
             }
             await this.$store.dispatch('loadBoard')

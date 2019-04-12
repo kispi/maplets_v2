@@ -144,6 +144,47 @@
         .article-header {
             background: @maple-unique;
         }
+
+        .expressions {
+            margin: auto;
+
+            .buttons {
+                button {
+                    .lines-1();
+                    border: 1px solid gray;
+
+                    &.slow-hover:hover {
+                        .bgm-legendary();
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+
+        .expressions-article {
+            .expressions {
+                width: 200px;
+                padding: 16px;
+
+                button {
+                    padding: 16px 8px;
+                }
+            }
+
+            border-bottom: 1px dotted gray;
+        }
+
+        .expressions-reply {
+            .expressions {
+                width: 120px;
+                
+                .buttons {
+                    button {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
     }
 
     .write-reply {

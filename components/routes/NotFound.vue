@@ -13,7 +13,7 @@
                         v-html="$options.filters.translate('NOT_FOUND')"></div>
                     <button
                         @click="onClick404"
-                        class="btn bgm-legendary btn-lg b-md m-a m-t-16">
+                        class="btn bgm-legendary b-md m-a m-t-16">
                         {{ 'GO_TO_BOARD' | translate }}
                     </button>
                 </div>

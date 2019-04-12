@@ -51,6 +51,10 @@
         "en": "Too frequent attempt to write the reply",
         "kr": "댓글 작성 시도수가 지나치게 잦습니다"
     },
+    "ERROR_ALREADY_EXPRESSED": {
+        "en": "You already expressed",
+        "kr": "이미 참여하셨습니다"
+    },
     "ERROR_SAVE": {
         "en": "Failed to save",
         "kr": "저장에 실패하였습니다"
@@ -391,6 +395,10 @@
         "en": "Accumulated",
         "kr": "누적"
     },
+    "SHOW_UPDATES": {
+        "en": "Show updates",
+        "kr": "업데이트 내역"
+    },
     "NEEDED_FEE": {
         "en": "Needed Fee",
         "kr": "필요 비용"
@@ -402,5 +410,13 @@
     "OTHER_AREAS": {
         "en": "Other Areas",
         "kr": "그 외 지역"
+    },
+    "EXPRESS_UP": {
+        "en": "Up",
+        "kr": "추천"
+    },
+    "EXPRESS_DOWN": {
+        "en": "Down",
+        "kr": "비공감"
     }
 }
