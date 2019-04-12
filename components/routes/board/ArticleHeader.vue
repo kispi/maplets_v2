@@ -53,17 +53,3 @@ export default {
     }
 }
 </script>
-<style lang="less">
-.article-header {
-    .info {
-        .flex-wrap {
-            &:not(:last-child)::after {
-                font-size: 7px;
-                color: lightgray;
-                content: "|";
-                margin: 0 4px;
-            }
-        }
-    }
-}
-</style>

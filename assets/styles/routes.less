@@ -138,6 +138,19 @@
         }
     }
 
+    .article-header, .reply {
+        .info {
+            .flex-wrap {
+                &:not(:last-child)::after {
+                    font-size: 7px;
+                    color: lightgray;
+                    content: "|";
+                    margin: 0 4px;
+                }
+            }
+        }
+    }
+
     .article {
         background: #fff;
 
@@ -152,11 +165,7 @@
                 button {
                     .lines-1();
                     border: 1px solid gray;
-
-                    &.slow-hover:hover {
-                        .bgm-legendary();
-                        color: #fff !important;
-                    }
+                    box-shadow: none;
                 }
             }
         }

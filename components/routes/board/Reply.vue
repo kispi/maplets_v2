@@ -1,11 +1,12 @@
 <template>
     <div class="reply">
         <div class="flex-row flex-between items-center">
-            <div class="flex-row">
+            <div class="flex-row info">
                 <div class="flex-wrap flex-row">
                     <small class="nickname lines-1" v-html="reply.nickname"></small>
                     <small class="c-text" v-if="reply.ip && !reply.user">({{ reply.ip | ipFront }})</small>
                 </div>
+                <small>{{ reply.createdAt | formatDate }}</small>
             </div>
             <div
                 class="delete-reply flex-row flex-wrap">
@@ -24,10 +25,9 @@
                 class="zmdi zmdi-close f-16"
                 @click="onClickDeleteReply"></i>
         </div>
-        <div class="pre-wrap" v-html="reply.text"></div>
+        <div class="pre-wrap m-t-8 m-b-16" v-html="reply.text"></div>
         <div class="flex-row flex-between items-center">
-            <small>{{ reply.createdAt | formatDate }}</small>
-            <div class="expressions-reply">
+            <div class="expressions-reply m-l-a">
                 <Expressions
                     :referenceType="'reply'"
                     :obj="reply"/>

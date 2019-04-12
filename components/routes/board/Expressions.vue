@@ -2,7 +2,7 @@
     <div class="expressions">
         <div class="flex-row buttons">
             <button
-                class="btn btn-default slow-hover b-sm flex-fill"
+                class="btn btn-default b-sm flex-fill"
                 :class="btn.class"
                 @click="express(btn.actionType)"
                 :key="btn.actionType"
