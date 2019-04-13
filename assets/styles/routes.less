@@ -142,7 +142,7 @@
         .info {
             .flex-wrap {
                 &:not(:last-child)::after {
-                    font-size: 7px;
+                    font-size: 12px;
                     color: lightgray;
                     content: "|";
                     margin: 0 4px;
@@ -251,4 +251,11 @@
             box-shadow: 0px 0px 24px 24px @brand-warning;
         }
     }
+}
+
+.board,
+.expressions .buttons button,
+.write-reply textarea, .write-reply input,
+.write-article textarea, .write-article input {
+    font-family: Arial, Helvetica, sans-serif;
 }

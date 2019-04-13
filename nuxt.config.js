@@ -21,7 +21,8 @@ const config = {
     router: {
         scrollBehavior: () => {
             return { x: 0, y: 0 }
-        }
+        },
+        middleware: 'before-each',
     },
     css: [
         { src: '@/assets/styles/index.less', lang: 'less' },

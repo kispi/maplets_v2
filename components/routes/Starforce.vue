@@ -298,6 +298,7 @@ export default {
 
     .selector .selected-item {
         border-radius: none;
+        font-weight: 500;
     }
 }
 </style>

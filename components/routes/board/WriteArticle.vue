@@ -1,10 +1,14 @@
 <template>
     <div class="write-article route">
 
-        <Modal v-if="!writeAllowed" @close="onCloseWriteArticlePassword">
+        <Modal v-if="!writeAllowed && $route.params.articleId" @close="onCloseWriteArticlePassword">
             <h2 class="c-danger" slot="header">{{ 'ENTER_PASSWORD' | translate }}</h2>
             <div slot="body">
-                <input type="password" v-model="article.password" :placeholder="'PASSWORD' | translate">
+                <input
+                    type="password"
+                    v-model="article.password"
+                    :placeholder="'PASSWORD' | translate"
+                    @keypress.enter="onClickConfirmPassword">
             </div>
             <div slot="footer" class="m-l-a" style="width: 240px;">
                 <div class="flex-row">
@@ -108,11 +112,11 @@ export default {
                     newVal.text.length <= 10000);
             },
             deep: true
-        }
+        },
     },
     methods: {
         onClickCancel() {
-            this.$router.go(-1)
+            this.$router.push({ name: "board" })
         },
         async onClickSave() {
             let save = this.$refs["save"]

@@ -14,7 +14,13 @@
                     <div
                         class="flex-row items-center"
                         v-if="showDeleteConfirm">
-                        <input type="password" :ref="'replyPassword'" class="flex-fill m-r-8" v-model="password" :placeholder="'PASSWORD' | translate">
+                        <input
+                            type="password"
+                            :ref="'replyPassword'"
+                            class="flex-fill m-r-8"
+                            v-model="password"
+                            :placeholder="'PASSWORD' | translate"
+                            @keypress.enter="onConfirmDelete">
                         <button
                             class="btn btn-sm bgm-danger b-sm flex-fill m-r-8"
                             @click="onConfirmDelete">{{ 'CONFIRM' | translate }}</button>
