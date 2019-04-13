@@ -80,25 +80,27 @@
 
     .chat-status {
         background: rgba(41, 48, 52, 0.75);
-        padding: 1px;
+        padding: 2px 0;
 
         .chat-type, button {
             border-radius: 4px;
-            padding: 2px;
-            box-shadow: inset 0 0 16px @chat-window-border;
+            padding: 3px;
+            box-shadow: inset 0 0 4px #000;
             color: #fff;
             cursor: pointer;
-            background: none;
+            background: #444;
             min-height: initial !important;
             font-size: @font-size-chat;
             line-height: @font-size-chat;
-            border: 1px solid gray;
+            font-weight: 500;
         }
 
         input {
             color: #fff;
-            border: 1px solid @chat-window-border !important;
-            border-radius: 0 !important;
+            border: none !important;
+            border-radius: 2px !important;
+            box-shadow: inset 0 0 16px @chat-window-border;
+            margin: 0 4px;
             background: none !important;
             font-size: @font-size-chat;
             padding: 2px !important;
