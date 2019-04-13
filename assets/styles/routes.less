@@ -50,49 +50,6 @@
     }
 }
 
-.arcane {
-    color: #fff;
-    font-weight: 700;
-
-    .keys {
-        background: rgba(0, 150, 190, 0.75);
-    }
-
-    .values {
-        background: rgba(76, 175, 80, 0.75);
-
-        > div {
-            font-size: 24px;
-        }
-    }
-
-    .keys, .values {
-        border-bottom: 1px dashed @m-lightgray;
-
-        > div {
-            padding: 16px;
-
-            &:first-child {
-                border-right: 1px dashed @m-lightgray;
-            }
-        }
-    }
-
-    .level-box {
-        div > div {
-            padding: 8px;
-            color: #fff;
-            background: rgba(76, 175, 80, 0.75);
-            border: 1px dashed #fff;
-            cursor: pointer;
-            
-            &.selected {
-                background: rgba(0, 150, 190, 0.75);
-            }
-        }
-    }
-}
-
 .ability {
     .items {
         margin: auto;
@@ -113,9 +70,6 @@
             &:first-child {
                 background-color: rgba(36, 164, 225, 1);
                 border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
-            }
-            &:not(:first-child) {
-                // min-width: 120px;
             }
             &:nth-child(2) { background: @maple-rare; }
             &:nth-child(3) { background: @maple-epic; }
@@ -198,7 +152,6 @@
     }
 
     .write-reply {
-        border-top: 1px solid lightgray;
         padding: 16px 8px;
     }
 }
@@ -216,7 +169,7 @@
     }
 }
 
-.union, .cube-probability {
+.union, .cube-probability, .arcane {
     tr:first-child {
         border-bottom: 1px dotted #000;
     }

@@ -35,6 +35,10 @@
         "en": "Arcane",
         "kr": "아케인"
     },
+    "ARCANE_SYMBOL": {
+        "en": "Arcane Symbol",
+        "kr": "아케인 심볼"
+    },
     "NOVA": {
         "en": "Nova",
         "kr": "노바"

@@ -19,8 +19,7 @@ export default {
     }),
     computed: {
         buttons() {
-            return [{ route: "starforce", name: "STARFORCE", class: "bgm-yellow" },
-                { route: "arcane", name: "ARCANE", class: "bgm-teal" },
+            return [{ route: "starforce", name: "STARFORCE_CALCULATOR", class: "bgm-yellow" },
                 { route: "tips", name: "MAPLE_TIPS", class: "bgm-legendary" },
                 { route: "board", name: "BOARD", class: "bgm-epic" },
                 { route: "about", name: "ABOUT", class: "bgm-unique" }]

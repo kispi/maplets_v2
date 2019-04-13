@@ -33,7 +33,7 @@ export default {
         show: false
     }),
     watch: {
-        $route (to, from) {
+        $route (to, from, next) {
             if (to) {
                 this.checkRoute(to)
             }
@@ -42,13 +42,9 @@ export default {
     computed: {
         items() {
             return [{
-                title: "STARFORCE",
+                title: "STARFORCE_CALCULATOR",
                 icon: "zmdi-star",
                 route: "starforce"
-            }, {
-                title: "ARCANE",
-                icon: "zmdi-star-circle",
-                route: "arcane"
             }, {
                 title: "MAPLE_TIPS",
                 icon: "zmdi-info-outline",

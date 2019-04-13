@@ -1,68 +1,69 @@
 <template>
     <div class="chat">
-
-        <div v-if="connected === false && chat === 'show'">
-            <div class="overlay bgm-gray o-50"></div>
-            <div class="overlay flex-row items-center">
-                <button
-                    class="btn btn-default b-md m-a"
-                    @click="connect"
-                    style="max-width: 120px;">{{ 'RECONNECT' | translate }}</button>
+        <div class="chat-wrapper">
+            <div v-if="connected === false && chat === 'show'">
+                <div class="overlay bgm-gray o-50"></div>
+                <div class="overlay flex-row items-center">
+                    <button
+                        class="btn btn-default b-md m-a"
+                        @click="connect"
+                        style="max-width: 120px;">{{ 'RECONNECT' | translate }}</button>
+                </div>
             </div>
-        </div>
 
-        <ConfirmChatUser v-show="showConfirmChatUser" @close="showConfirmChatUser = false"/>
-        <ConfirmChatType v-show="showConfirmChatType" @close="showConfirmChatType = false" @onConfirm="onConfirmChatType"/>
+            <ConfirmChatUser v-show="showConfirmChatUser" @close="showConfirmChatUser = false"/>
+            <ConfirmChatType v-show="showConfirmChatType" @close="showConfirmChatType = false" @onConfirm="onConfirmChatType"/>
 
-        <div class="flex-row o-hidden">
-            <div class="btn-container p-relative chat-buttons flex-wrap">
-                <transition-group name="fade">
-                    <div class="overlay" v-show="chat === 'show'" :key="0"></div>
+            <div class="flex-row o-hidden">
+                <div class="btn-container p-relative chat-buttons flex-wrap">
+                    <transition-group name="fade">
+                        <div class="overlay" v-show="chat === 'show'" :key="0"></div>
+                        <button
+                            :key="1"
+                            v-show="chat === 'show'"
+                            class="btn font-hover-shadow flex-fill"
+                            @click="showConfirmChatUser = true"><i class="zmdi zmdi-account"></i></button>
+                        <button
+                            :key="2"
+                            v-show="chat === 'show'"
+                            class="btn font-hover-shadow flex-fill m-t-8"
+                            @click="clearMessages"><i class="zmdi zmdi-delete"></i></button>
+                    </transition-group>
                     <button
                         :key="1"
-                        v-show="chat === 'show'"
-                        class="btn font-hover-shadow flex-fill"
-                        @click="showConfirmChatUser = true"><i class="zmdi zmdi-account"></i></button>
-                    <button
-                        :key="2"
-                        v-show="chat === 'show'"
                         class="btn font-hover-shadow flex-fill m-t-8"
-                        @click="clearMessages"><i class="zmdi zmdi-delete"></i></button>
-                </transition-group>
-                <button
-                    :key="1"
-                    class="btn font-hover-shadow flex-fill m-t-8"
-                    @click="toggleWindow">
-                    <i class="zmdi zmdi-comment" v-show="chat !== 'show'"></i>
-                    <i class="zmdi zmdi-close" v-show="chat === 'show'"></i>
-                </button>
-            </div>
-            <transition name="slide-up">
-                <div class="flex-fill" v-show="chat === 'show'">
-                    <div class="flex-row chat-upper">
-                        <div class="chat-window" ref="chat-window">
-                            <Message
-                                :message="message"
-                                v-for="(message, idx) in messages"
-                                :key="idx"/>
-                        </div>
-                        <ChatUsers class="flex-wrap" v-show="chat === 'show'" @onClickUser="focusChatInputBox"/>
-                    </div>
-                    <div class="flex-row items-center chat-status">
-                        <button class="btn flex-wrap chat-type text-ellipsis" @click="showConfirmChatType = true">{{ displayedChatType }}</button>
-                        <input
-                            class="flex-fill"
-                            :disabled="disableChat"
-                            @focus="onFocus"
-                            @blur="onBlur"
-                            v-model="text"
-                            @keypress.enter="send"
-                            :ref="'chatInputBox'"
-                            maxlength="100">
-                        <button type="button" class="btn flex-wrap" @click="send">{{ 'SEND' | translate }}</button>
-                    </div>
+                        @click="toggleWindow">
+                        <i class="zmdi zmdi-comment" v-show="chat !== 'show'"></i>
+                        <i class="zmdi zmdi-close" v-show="chat === 'show'"></i>
+                    </button>
                 </div>
-            </transition>
+                <transition name="slide-up">
+                    <div class="flex-fill" v-show="chat === 'show'">
+                        <div class="flex-row chat-upper">
+                            <div class="chat-window" ref="chat-window">
+                                <Message
+                                    :message="message"
+                                    v-for="(message, idx) in messages"
+                                    :key="idx"/>
+                            </div>
+                            <ChatUsers class="flex-wrap" v-show="chat === 'show'" @onClickUser="focusChatInputBox"/>
+                        </div>
+                        <div class="flex-row items-center chat-status">
+                            <button class="btn flex-wrap chat-type text-ellipsis" @click="showConfirmChatType = true">{{ displayedChatType }}</button>
+                            <input
+                                class="flex-fill"
+                                :disabled="disableChat"
+                                @focus="onFocus"
+                                @blur="onBlur"
+                                v-model="text"
+                                @keypress.enter="send"
+                                :ref="'chatInputBox'"
+                                maxlength="100">
+                            <button type="button" class="btn flex-wrap" @click="send">{{ 'SEND' | translate }}</button>
+                        </div>
+                    </div>
+                </transition>
+            </div>
         </div>
     </div>
 </template>

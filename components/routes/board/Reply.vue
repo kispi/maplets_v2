@@ -81,7 +81,7 @@ export default {
 <style lang="less">
 .reply {
     padding: 8px;
-    border-top: 1px dotted gray;
+    border-bottom: 1px dotted gray;
     position: relative;
 
     .nickname {

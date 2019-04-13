@@ -408,6 +408,11 @@ dl {
     .no-scrollbar();
 }
 
+.chat-wrapper {
+    margin: auto;
+    max-width: @screen-sm;
+}
+
 @media (max-width: @screen-xs) {
     .route&:not(.board) {
         bottom: 0;
@@ -471,13 +476,13 @@ dl {
             transition: all 0.5 ease;
             margin: 0;
             width: 200px;
-            border-top: 1px solid lightgray;
+            border-top: 1px solid gray;
     
             .menu-item {
                 color: #333;
             
                 &:not(:last-child) {
-                    border-bottom: 1px solid lightgray;
+                    border-bottom: 1px solid gray;
                 }
                 
                 i {

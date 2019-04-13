@@ -37,6 +37,14 @@ export default {
                 this.$store.commit('background', val)
             }
         },
+        chat: {
+            get() {
+                return this.$store.getters.chat
+            },
+            set(val) {
+                this.$store.commit('chat', val)
+            }
+        }
     },
     mounted() {
         this.items = [{
@@ -51,6 +59,13 @@ export default {
             icon: "zmdi-image-o",
             action: background => {
                 this.background = this.background === "show" ? "hide" : "show"
+                this.$toast.success("SUCCESS")
+            }
+        }, {
+            title: "chat",
+            icon: "zmdi-comment-outline",
+            action: chat => {
+                this.chat = this.chat === "show" ? "hide" : "show"
                 this.$toast.success("SUCCESS")
             }
         }]

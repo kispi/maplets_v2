@@ -24,13 +24,17 @@ export default {
                 route: "tips-link",
                 class: "bgm-rare",
             }, {
-                title: "CUBE_PROBABILITY",
-                route: "tips-cube-probability",
-                class: "bgm-unique"
-            }, {
                 title: "UNION",
                 route: "tips-union",
                 class: "bgm-gray",
+            }, {
+                title: "CUBE_PROBABILITY",
+                route: "tips-cube-probability",
+                class: "bgm-unique",
+            }, {
+                title: "ARCANE_SYMBOL",
+                route: "tips-arcane",
+                class: "bgm-teal",
             }]
         },
     },

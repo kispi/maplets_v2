@@ -103,6 +103,10 @@
         "en": "Starforce",
         "kr": "스타포스"
     },
+    "STARFORCE_CALCULATOR": {
+        "en": "Starforce Calculator",
+        "kr": "스타포스 계산기"
+    },
     "CALC_NORMAL": {
         "en": "Normal",
         "kr": "일반"
@@ -371,14 +375,6 @@
         "en": "Custom",
         "kr": "커스텀"
     },
-    "TO_LEV": {
-        "en": "To lev %s",
-        "kr": "%s 레벨까지"
-    },
-    "SET_LEVEL_HERE": {
-        "en": "Set Level here",
-        "kr": "레벨을 선택하세요"
-    },
     "LEVEL": {
         "en": "Level",
         "kr": "레벨"
@@ -391,17 +387,9 @@
         "en": "Needed Exp",
         "kr": "필요 성장치"
     },
-    "ACCUMULATED": {
-        "en": "Accumulated",
-        "kr": "누적"
-    },
     "SHOW_UPDATES": {
         "en": "Show updates",
         "kr": "업데이트 내역"
-    },
-    "NEEDED_FEE": {
-        "en": "Needed Fee",
-        "kr": "필요 비용"
     },
     "VANISHING_ROAD": {
         "en": "Vanishing Road",

@@ -102,7 +102,7 @@ export default {
 .articles {
     .article-header {
         &:not(:first-child) {
-            border-top: 1px solid lightgray;
+            border-top: 1px dotted gray;
         }
     }
 }

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Arcane from '@/components/routes/Arcane'
+import Arcane from '@/components/routes/tips/Arcane'
 
 export default {
     layout: 'default',

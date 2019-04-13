@@ -2,7 +2,7 @@ const maxFee = 137840000
 const feeVR = 7130000
 const feeOthers = 6600000
 
-const requiredExp = [0]
+const requiredExp = []
 const requiredFee = {
     vanishingRoad: [maxFee],
     others: [maxFee],
@@ -17,16 +17,8 @@ for (let i = 1; i <= 18; i++) {
     requiredFee.others.push(requiredFee.others[i - 1] - feeOthers)
 }
 
-requiredFee.vanishingRoad.push(0)
-requiredFee.others.push(0)
-
 requiredFee.vanishingRoad.reverse()
 requiredFee.others.reverse()
-
-requiredFee.vanishingRoad.push(0)
-requiredFee.others.push(0)
-
-requiredExp.push(0)
 
 let Arcane = {
     exp: function(lev) {
@@ -52,7 +44,9 @@ let Arcane = {
             total += this.fee(lev, area)
         }
         return total
-    }
+    },
+    requiredExp,
+    requiredFee,
 }
 
 export default Arcane

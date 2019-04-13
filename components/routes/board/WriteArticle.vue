@@ -12,8 +12,13 @@
             </div>
             <div slot="footer" class="m-l-a" style="width: 240px;">
                 <div class="flex-row">
-                    <button @click="onCloseWriteArticlePassword" class="btn btn-default b-md m-r-8">{{ 'CANCEL' | translate }}</button>
-                    <button @click="onClickConfirmPassword" class="btn btn-danger b-md">{{ 'CONFIRM' | translate }}</button>
+                    <button
+                        @click="onCloseWriteArticlePassword"
+                        class="btn btn-default b-md m-r-8">{{ 'CANCEL' | translate }}</button>
+                    <button
+                        @click="onClickConfirmPassword"
+                        class="btn btn-danger b-md"
+                        :disabled="!article.password">{{ 'CONFIRM' | translate }}</button>
                 </div>
             </div>
         </Modal>
@@ -113,6 +118,12 @@ export default {
             },
             deep: true
         },
+        user: {
+            handler() {
+                this.init()
+            },
+            deep: true
+        }
     },
     methods: {
         onClickCancel() {
