@@ -406,5 +406,9 @@
     "EXPRESS_DOWN": {
         "en": "Down",
         "kr": "비공감"
+    },
+    "DOWNLOAD_CHROME": {
+        "en": "Download Chrome",
+        "kr": "크롬 다운로드"
     }
 }

@@ -52,21 +52,18 @@ export default {
             icon: "zmdi-font",
             action: lang => {
                 this.lang = this.lang === "kr" ? "en" : "kr"
-                this.$toast.success("SUCCESS")
             }
         }, {
             title: "background",
             icon: "zmdi-image-o",
             action: background => {
                 this.background = this.background === "show" ? "hide" : "show"
-                this.$toast.success("SUCCESS")
             }
         }, {
             title: "chat",
             icon: "zmdi-comment-outline",
             action: chat => {
                 this.chat = this.chat === "show" ? "hide" : "show"
-                this.$toast.success("SUCCESS")
             }
         }]
     }

@@ -39,6 +39,26 @@ export default {
         onClickTitle() {
             this.$router.push("/")
         },
+        redirectToIENotSupported() {
+            let ua = window.navigator.userAgent
+            let msie = ua.indexOf('MSIE')
+            let trident = ua.indexOf('Trident/')
+
+            if (process.client && (msie > 0 || trident > 0)) {
+                this.$store.commit('chat', 'hide')
+                this.$router.push({
+                    name: 'ie-not-supported'
+                })
+            }
+        },
+    },
+    watch: {
+        $route() {
+            this.redirectToIENotSupported()
+        }
+    },
+    mounted() {
+        this.redirectToIENotSupported()
     },
     computed: {
         background() {
@@ -62,7 +82,7 @@ export default {
                         img: require("@/assets/images/backgrounds/bg-" + bg.title + ".jpg")
                     }
                 })
-        }
+        },
     },
 }
 </script>
