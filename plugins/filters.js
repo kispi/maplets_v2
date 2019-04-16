@@ -75,7 +75,7 @@ const hasNicknameError = (nickname) => {
 }
 
 const alphaNumeric = s => {
-    return s.split("").every(c => /^[a-zA-Z0-9가-힣]+$/.test(c))
+    return s.split("").every(c => /^[a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ]+$/.test(c))
 }
 
 export default ({ app, store }, inject) => {
