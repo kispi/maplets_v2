@@ -22,7 +22,7 @@
         </div>
 
         <div class="updates p-16 card shadow">
-            <div class="c-accent text-center text-underline" @click="showUpdates = !showUpdates">{{ 'SHOW_UPDATES' | translate }}</div>
+            <div class="c-accent text-center text-underline cursor-pointer" @click="showUpdates = !showUpdates">{{ 'SHOW_UPDATES' | translate }}</div>
             <TransitionExpand>
                 <div v-if="showUpdates">
                     <ul class="m-b-32" v-for="day in updates" :key="day.timestamp">
@@ -158,7 +158,12 @@ export default {
                         '채팅창 가로 길이 제한',
                         'IE로 접속시 컨텐츠 제공하지 않도록 변경'
                     ]
-                },
+                }, {
+                    timestamp: "2019-06-01",
+                    jobs: [
+                        '하이퍼고확 추가'
+                    ]
+                }
             ]
         }
     }
