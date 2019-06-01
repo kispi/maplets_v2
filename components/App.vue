@@ -6,7 +6,7 @@
         </transition>
         
         <div class="header flex-row flex-between">
-            <div class="title-bar flex-row items-center flex-fill pointer-cursor" @click="onClickTitle">
+            <div class="title-bar flex-row items-center flex-fill cursor-pointer" @click="onClickTitle">
                 <img class="logo flex-wrap m-r-8" src="@/assets/logo.png">
                 <div class="text-xl flex-fill">Maplets</div>
             </div>

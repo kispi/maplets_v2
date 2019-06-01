@@ -1,6 +1,6 @@
 <template>
     <div
-        class="article-header pointer-cursor slow-hover p-b-8"
+        class="article-header cursor-pointer slow-hover p-b-8"
         :class="selected()"
         @click="onClickArticle">
         <div class="m-b-8">

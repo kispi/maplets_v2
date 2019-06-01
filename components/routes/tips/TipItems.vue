@@ -1,7 +1,7 @@
 <template>
     <div class="tip-items">
         <div
-            class="tip-item flex-fill c-white text-center slow-hover pointer-cursor b-md p-8 m-b-8"
+            class="tip-item flex-fill c-white text-center slow-hover cursor-pointer b-md p-8 m-b-8"
             :class="tip.class"
             :key="tip.title"
             v-for="tip in tips"

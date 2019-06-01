@@ -2,7 +2,7 @@
     <div class="expressions">
         <div class="flex-row buttons">
             <button
-                class="flex items-center b-sm bgm-white flex-fill pointer-cursor"
+                class="flex items-center b-sm bgm-white flex-fill cursor-pointer"
                 :class="btn.class"
                 @click="express(btn.actionType)"
                 :key="btn.actionType"

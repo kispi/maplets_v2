@@ -1,7 +1,7 @@
 <template>
     <div class="chat-users" v-if="users">
         <div
-            class="flex-row items-center pointer-cursor"
+            class="flex-row items-center cursor-pointer"
             v-for="(user, idx) in users" :key="idx"
             v-show="user.nickname"
             @click="onClickUser(user.nickname)">

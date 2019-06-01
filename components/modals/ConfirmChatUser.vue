@@ -7,7 +7,7 @@
                         <div class="lh-0 b-sm o-hidden">
                             <div class="flex-row" v-for="(worlds, idx) in threeColumnedWorlds" :key="idx">
                                 <div
-                                    class="world-label btn-maple font-hover-shadow flex-row items-center f-700 pointer-cursor lines-1"
+                                    class="world-label btn-maple font-hover-shadow flex-row items-center f-700 cursor-pointer lines-1"
                                     :class="{'selected': chosenWorld === world.title}"
                                     v-for="world in worlds"
                                     :key="world.title"
