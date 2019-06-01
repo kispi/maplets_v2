@@ -37,6 +37,7 @@ const (
 	ContentTypeNormal    = "NORMAL"
 	ContentTypeMegaphone = "MEGAPHONE"
 	ContentTypeWhisper   = "WHISPER"
+	ContentTypeHyper     = "HYPER"
 
 	StatusSuccess = "SUCCESS"
 	StatusError   = "ERROR"
@@ -57,7 +58,8 @@ func (m *Message) isBroadcastableContentType() bool {
 	return m.Content.Type == ContentTypeItem ||
 		m.Content.Type == ContentTypeNormal ||
 		m.Content.Type == ContentTypeMegaphone ||
-		m.Content.Type == ContentTypeWhisper
+		m.Content.Type == ContentTypeWhisper ||
+		m.Content.Type == ContentTypeHyper
 }
 
 func now() *time.Time {

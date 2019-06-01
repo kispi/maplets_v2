@@ -82,7 +82,7 @@ export default {
             }
         },
         chatTypes() {
-            return ['ITEM', 'NORMAL', 'MEGAPHONE', 'WHISPER'].map(title => {
+            return ['ITEM', 'NORMAL', 'MEGAPHONE', 'WHISPER', 'HYPER'].map(title => {
                 return {
                     title,
                     value: title

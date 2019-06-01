@@ -335,6 +335,10 @@
         "en": "Whisper",
         "kr": "귓속말"
     },
+    "HYPER": {
+        "en": "Hyper",
+        "kr": "하이퍼"
+    },
     "NICKNAME": {
         "en": "Nickname",
         "kr": "닉네임"
