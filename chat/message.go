@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"log"
+	"net/http"
 	"time"
 )
 
@@ -211,4 +213,35 @@ func onWhisper(c *Conn, m *Message) {
 	}
 	m.To = []*User{partner, c.user}
 	c.hub.Broadcast(m, StatusSuccess)
+}
+
+// Post -
+func (m *Message) Post() (err error) {
+	type toMarshal struct {
+		User      *User      `json:"user"`
+		Content   *Content   `json:"content"`
+		Timestamp *time.Time `json:"timestamp"`
+		EventType string     `json:"eventType"`
+		Status    string     `json:"status"`
+	}
+
+	tm := &toMarshal{
+		User:      m.User,
+		Content:   m.Content,
+		Timestamp: m.Timestamp,
+		EventType: m.EventType,
+		Status:    m.Status,
+	}
+
+	type payload struct {
+		Content string `json:"content"`
+	}
+
+	b, _ := json.Marshal(tm)
+	p := &payload{Content: string(b)}
+
+	b, _ = json.Marshal(p)
+	buff := bytes.NewBuffer(b)
+	_, err = http.Post("http://127.0.0.1:4500/v1/messages", "application/json", buff)
+	return
 }

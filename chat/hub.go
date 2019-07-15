@@ -95,6 +95,7 @@ func (h *Hub) getConnectedUsers(userType string) (users []*User) {
 // Broadcast -
 func (h *Hub) Broadcast(message *Message, status string) {
 	message.Status = status
+	message.Post()
 	h.broadcast <- message
 }
 
