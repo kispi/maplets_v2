@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"net/http"
 )
 
 type Hub struct {
@@ -99,11 +100,12 @@ func (h *Hub) Broadcast(message *Message, status string) {
 	h.broadcast <- message
 }
 
-func (h *Hub) newUser() *User {
+func (h *Hub) newUser(r *http.Request) *User {
 	return &User{
 		AuthToken: h.generateToken(),
 		Nickname:  "익명" + h.generateToken(),
 		World:     "NONE",
+		IP:        FromRequest(r),
 	}
 }
 

@@ -32,7 +32,7 @@ func serveWs(hub *Hub, w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 		return
 	}
-	conn := &Conn{hub: hub, ws: ws, send: make(chan []byte, 256), user: &User{}}
+	conn := &Conn{hub: hub, ws: ws, send: make(chan []byte, 256), user: &User{IP: FromRequest(r)}}
 	conn.hub.register <- conn
 	hub.Broadcast(&Message{
 		EventType: EventTypeEnter,
@@ -40,5 +40,5 @@ func serveWs(hub *Hub, w http.ResponseWriter, r *http.Request) {
 	}, StatusSuccess)
 
 	go conn.writePump()
-	go conn.readPump()
+	go conn.readPump(r)
 }

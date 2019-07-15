@@ -32,6 +32,7 @@ type User struct {
 	Nickname         string `json:"nickname,omitempty"`
 	SelectedChatType string `json:"selectedChatType,omitempty"`
 	World            string `json:"world,omitempty"`
+	IP               string `json:"ip,omitempty"`
 }
 
 const (
@@ -85,7 +86,7 @@ func (m *Message) ToByte() []byte {
 }
 
 // HandleMessage -
-func HandleMessage(c *Conn, message []byte) {
+func HandleMessage(c *Conn, message []byte, r *http.Request) {
 	log.Print("message from client:", string(message))
 	m := &Message{}
 	err := json.Unmarshal(message, m)
@@ -93,7 +94,7 @@ func HandleMessage(c *Conn, message []byte) {
 
 	switch m.EventType {
 	case EventTypeSetUser:
-		onSetUser(c, m)
+		onSetUser(c, m, r)
 	case EventTypeGetUsers:
 		onGetUser(c, m)
 	case EventTypeBroadcastChange:
@@ -109,13 +110,13 @@ func onerror(err error) {
 	}
 }
 
-func onSetUser(c *Conn, m *Message) {
+func onSetUser(c *Conn, m *Message, r *http.Request) {
 	if m.User == nil {
 		return
 	}
 
 	if m.User.AuthToken == "" {
-		newUser := c.hub.newUser()
+		newUser := c.hub.newUser(r)
 		m.User = newUser
 		c.user = newUser
 		c.hub.addOrUpdateAccount(c.user)

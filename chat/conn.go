@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"log"
+	"net/http"
 	"time"
 
 	"github.com/gorilla/websocket"
@@ -40,7 +41,7 @@ type Conn struct {
 	send chan []byte
 }
 
-func (c *Conn) readPump() {
+func (c *Conn) readPump(r *http.Request) {
 	defer func() {
 		c.hub.Broadcast(&Message{
 			EventType: EventTypeLeave,
@@ -65,7 +66,7 @@ func (c *Conn) readPump() {
 			break
 		}
 		message = bytes.TrimSpace(bytes.Replace(message, newline, space, -1))
-		HandleMessage(c, message)
+		HandleMessage(c, message, r)
 	}
 }
 
