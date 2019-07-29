@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-var port = "4600"
+var port = ":4600"
 
 func main() {
 	flag.Parse()
