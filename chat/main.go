@@ -4,18 +4,26 @@ import (
 	"flag"
 	"log"
 	"net/http"
+	"time"
 )
 
-var addr = flag.String("addr", ":4600", "http service address")
+var port = "4600"
 
 func main() {
 	flag.Parse()
 	hub := newHub()
 	go hub.run()
+	server := &http.Server{
+		Addr:         port,
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
+	}
+
+	server.SetKeepAlivesEnabled(false)
 	http.HandleFunc("/v1/webchat/socket", func(w http.ResponseWriter, r *http.Request) {
 		serveWs(hub, w, r)
 	})
-	err := http.ListenAndServe(*addr, nil)
+	err := server.ListenAndServe()
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}

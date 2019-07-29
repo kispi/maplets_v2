@@ -243,6 +243,11 @@ func (m *Message) Post() (err error) {
 
 	b, _ = json.Marshal(p)
 	buff := bytes.NewBuffer(b)
-	_, err = http.Post("http://127.0.0.1:4500/v1/messages", "application/json", buff)
+	resp, err := http.Post("http://127.0.0.1:4500/v1/messages", "application/json", buff)
+	if err != nil {
+		log.Println(err)
+	}
+
+	resp.Body.Close()
 	return
 }
