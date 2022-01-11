@@ -50,10 +50,6 @@ export default {
                 icon: "zmdi-info-outline",
                 route: "tips"
             }, {
-                title: "BOARD",
-                icon: "zmdi-format-list-bulleted",
-                route: "board"
-            }, {
                 title: "ABOUT",
                 icon: "zmdi-help",
                 route: "about"
