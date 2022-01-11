@@ -14,7 +14,7 @@
     },
     "dependencies": {
         "nuxt": "^2.0.0",
-        "axios": "^0.18.0",
+        "axios": "^0.21.2",
         "vue-moment": "^4.0.0"
     },
     "devDependencies": {
