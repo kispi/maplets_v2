@@ -25,5 +25,10 @@
         "eslint-plugin-vue": "^4.0.0",
         "less": "^3.9.0",
         "less-loader": "^4.0.5"
+    },
+    "config": {
+        "nuxt": {
+            "port": "3030"
+        }
     }
 }
