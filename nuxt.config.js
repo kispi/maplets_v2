@@ -17,9 +17,6 @@ const config = {
         link: [
             { rel: 'icon', href: '/favicon.png' }
         ],
-        script: [
-            { defer: true, hid: 'adsense', src: '/adsense.js' },
-        ],
     },
     router: {
         scrollBehavior: () => {
